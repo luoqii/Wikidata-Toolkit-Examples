@@ -24,7 +24,7 @@ class ShangHaiRanking {
     private var wbde: WikibaseDataEditor? = null
     private var wbdf: WikibaseDataFetcher? = null
 
-    val DEBUG = true
+    val DEBUG = false
 
     /**
      * 只處理第一個數據，測試，驗證用
@@ -39,7 +39,14 @@ class ShangHaiRanking {
     fun parseDataAndUpload2wikidata() {
         //bcur
 //        processDataSet("2023")
-        processDataSet("2015", TYPE.BCUR)
+//        processDataSet("2015", TYPE.BCUR)
+//        processDataSet("2016", TYPE.BCUR)
+//        processDataSet("2017", TYPE.BCUR)
+//        processDataSet("2018", TYPE.BCUR)
+//        processDataSet("2019", TYPE.BCUR)
+//        processDataSet("2020", TYPE.BCUR)
+//        processDataSet("2021", TYPE.BCUR)
+//        processDataSet("2022", TYPE.BCUR)
 //        processDataSet("2023", TYPE.BCUR)
 
         //arwu
@@ -88,7 +95,7 @@ class ShangHaiRanking {
             TYPE.ARWU -> TODO()
         }
 
-        config.comment += " more see https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
+        config.comment += " top150  more see https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
 
         println("prepare wikidata")
         login()

@@ -1,0 +1,981 @@
+# 以#开头的，或者空行都视为注释，下面的空行也是注释
+
+# 这个文件如何生成的
+# 1，https://www.shanghairanking.cn/rankings/bcur/2017 选择中文
+# 2，选中每一页的排名信息，CTRL_C,然后在 CTRL_V到本文件末尾
+
+#page 1
+1
+清华大学
+清华大学
+Tsinghua University
+双一流/985/211
+
+北京	理工	94.0
+2
+北京大学
+北京大学
+Peking University
+双一流/985/211
+
+北京	综合	81.0
+3
+浙江大学
+浙江大学
+Zhejiang University
+双一流/985/211
+
+浙江	综合	78.0
+4
+上海交通大学
+上海交通大学
+Shanghai Jiao Tong University
+双一流/985/211
+
+上海	综合	77.0
+5
+复旦大学
+复旦大学
+Fudan University
+双一流/985/211
+
+上海	综合	71.0
+6
+中国科学技术大学
+中国科学技术大学
+University of Science and Technology of China
+双一流/985/211
+
+安徽	理工	66.0
+7
+南京大学
+南京大学
+Nanjing University
+双一流/985/211
+
+江苏	综合	65.0
+8
+华中科技大学
+华中科技大学
+Huazhong University of Science and Technology
+双一流/985/211
+
+湖北	理工	63.0
+9
+中山大学
+中山大学
+Sun Yat-sen University
+双一流/985/211
+
+广东	综合	63.0
+10
+哈尔滨工业大学
+哈尔滨工业大学
+Harbin Institute of Technology
+双一流/985/211
+
+黑龙江	理工	62.0
+11
+同济大学
+同济大学
+Tongji University
+双一流/985/211
+
+上海	理工	61.0
+12
+东南大学
+东南大学
+Southeast University
+双一流/985/211
+
+江苏	综合	60.0
+13
+武汉大学
+武汉大学
+Wuhan University
+双一流/985/211
+
+湖北	综合	58.0
+14
+北京航空航天大学
+北京航空航天大学
+Beihang University
+双一流/985/211
+
+北京	理工	58.0
+15
+南开大学
+南开大学
+Nankai University
+双一流/985/211
+
+天津	综合	58.0
+16
+四川大学
+四川大学
+Sichuan University
+双一流/985/211
+
+四川	综合	57.0
+16
+西安交通大学
+西安交通大学
+Xi'an Jiaotong University
+双一流/985/211
+
+陕西	综合	57.0
+18
+天津大学
+天津大学
+Tianjin University
+双一流/985/211
+
+天津	理工	56.0
+19
+华南理工大学
+华南理工大学
+South China University of Technology
+双一流/985/211
+
+广东	理工	56.0
+20
+北京师范大学
+北京师范大学
+Beijing Normal University
+双一流/985/211
+
+北京	师范	55.0
+21
+厦门大学
+厦门大学
+Xiamen University
+双一流/985/211
+
+福建	综合	55.0
+22
+山东大学
+山东大学
+Shandong University
+双一流/985/211
+
+山东	综合	54.0
+23
+大连理工大学
+大连理工大学
+Dalian University of Technology
+双一流/985/211
+
+辽宁	理工	54.0
+24
+吉林大学
+吉林大学
+Jilin University
+双一流/985/211
+
+吉林	综合	54.0
+25
+北京理工大学
+北京理工大学
+Beijing Institute of Technology
+双一流/985/211
+
+北京	理工	53.0
+26
+中南大学
+中南大学
+Central South University
+双一流/985/211
+
+湖南	综合	52.0
+27
+对外经济贸易大学
+对外经济贸易大学
+University of International Business and Economics
+双一流/211
+
+北京	财经	52.0
+28
+苏州大学
+苏州大学
+Soochow University
+双一流/211
+
+江苏	综合	52.0
+28
+中国人民大学
+中国人民大学
+Renmin University of China
+双一流/985/211
+
+北京	综合	52.0
+30
+西北工业大学
+西北工业大学
+Northwestern Polytechnical University
+双一流/985/211
+
+陕西	理工	51.0
+
+#page2
+
+31
+湖南大学
+湖南大学
+Hunan University
+双一流/985/211
+
+湖南	综合	51.0
+32
+华东理工大学
+华东理工大学
+East China University of Science and Technology
+双一流/211
+
+上海	理工	50.0
+32
+华东师范大学
+华东师范大学
+East China Normal University
+双一流/985/211
+
+上海	师范	50.0
+34
+电子科技大学
+电子科技大学
+University of Electronic Science and Technology of China
+双一流/985/211
+
+四川	理工	49.0
+35
+重庆大学
+重庆大学
+Chongqing University
+双一流/985/211
+
+重庆	综合	49.0
+36
+南京航空航天大学
+南京航空航天大学
+Nanjing University of Aeronautics and Astronautics
+双一流/211
+
+江苏	理工	49.0
+37
+北京科技大学
+北京科技大学
+University of Science and Technology Beijing
+双一流/211
+
+北京	理工	49.0
+38
+上海财经大学
+上海财经大学
+Shanghai University of Finance and Economics
+双一流/211
+
+上海	财经	49.0
+39
+南京理工大学
+南京理工大学
+Nanjing University of Science and Technology
+双一流/211
+
+江苏	理工	48.0
+39
+中国农业大学
+中国农业大学
+China Agricultural University
+双一流/985/211
+
+北京	农业	48.0
+41
+北京交通大学
+北京交通大学
+Beijing jiaotong University
+双一流/211
+
+北京	理工	47.0
+42
+北京化工大学
+北京化工大学
+Beijing University of Chemical Technology
+双一流/211
+
+北京	理工	47.0
+42
+首都医科大学
+首都医科大学
+Capital Medical University
+北京	医药	47.0
+44
+福州大学
+福州大学
+Fuzhou University
+双一流/211
+
+福建	理工	47.0
+44
+武汉理工大学
+武汉理工大学
+Wuhan University of Technology
+双一流/211
+
+湖北	理工	47.0
+44
+中央财经大学
+中央财经大学
+Central University of Finance and Economics
+双一流/211
+
+北京	财经	47.0
+47
+北京邮电大学
+北京邮电大学
+Beijing University of Posts and Telecommunications
+双一流/211
+
+北京	理工	47.0
+47
+东华大学
+东华大学
+Donghua University
+双一流/211
+
+上海	理工	47.0
+47
+华中师范大学
+华中师范大学
+Central China Normal University
+双一流/211
+
+湖北	师范	47.0
+50
+上海大学
+上海大学
+Shanghai University
+双一流/211
+
+上海	综合	46.0
+51
+西安电子科技大学
+西安电子科技大学
+Xidian University
+双一流/211
+
+陕西	理工	46.0
+52
+北京协和医学院
+北京协和医学院
+Peking Union Medical College
+双一流
+
+北京	医药	46.0
+53
+天津医科大学
+天津医科大学
+Tianjin Medical University
+双一流/211
+
+天津	医药	46.0
+54
+华北电力大学
+华北电力大学
+North China Electric Power University
+双一流/211
+
+北京	理工	45.0
+55
+东北大学
+东北大学
+Northeastern University
+双一流/985/211
+
+辽宁	理工	45.0
+55
+东北师范大学
+东北师范大学
+Northeast Normal University
+双一流/211
+
+吉林	师范	45.0
+57
+暨南大学
+暨南大学
+Jinan University
+双一流/211
+
+广东	综合	45.0
+58
+兰州大学
+兰州大学
+Lanzhou University
+双一流/985/211
+
+甘肃	综合	45.0
+59
+江南大学
+江南大学
+Jiangnan University
+双一流/211
+
+江苏	综合	45.0
+59
+南京医科大学
+南京医科大学
+Nanjing Medical University
+双一流
+
+江苏	医药	45.0
+
+61
+中国海洋大学
+中国海洋大学
+Ocean University of China
+双一流/985/211
+
+山东	综合	45.0
+62
+上海外国语大学
+上海外国语大学
+Shanghai International Studies University
+双一流/211
+
+上海	语言	44.0
+63
+中国地质大学（北京）
+中国地质大学（北京）
+China University of Geosciences Beijing
+双一流/211
+
+北京	理工	44.0
+64
+西南财经大学
+西南财经大学
+Southwestern University of Finance and Economics
+双一流/211
+
+四川	财经	44.0
+65
+中国地质大学（武汉）
+中国地质大学（武汉）
+China University of Geosciences
+双一流/211
+
+湖北	理工	44.0
+66
+华中农业大学
+华中农业大学
+Huazhong Agricultural University
+双一流/211
+
+湖北	农业	44.0
+66
+南方医科大学
+南方医科大学
+Southern Medical University
+广东	医药	44.0
+68
+合肥工业大学
+合肥工业大学
+Hefei University of Technology
+双一流/211
+
+安徽	理工	44.0
+69
+中国医科大学
+中国医科大学
+China Medical University (Shenyang)
+辽宁	医药	43.0
+70
+西南大学
+西南大学
+Southwest University
+双一流/211
+
+重庆	综合	43.0
+71
+南京农业大学
+南京农业大学
+Nanjing Agricultural University
+双一流/211
+
+江苏	农业	43.0
+71
+中国药科大学
+中国药科大学
+China Pharmaceutical University
+双一流/211
+
+江苏	医药	43.0
+71
+中南财经政法大学
+中南财经政法大学
+Zhongnan University of Economics and Law
+双一流/211
+
+湖北	财经	43.0
+74
+哈尔滨工程大学
+哈尔滨工程大学
+Harbin Engineering University
+双一流/211
+
+黑龙江	理工	43.0
+74
+中国石油大学（北京）
+中国石油大学（北京）
+China University of Petroleum, Beijing
+双一流/211
+
+北京	理工	43.0
+76
+浙江工业大学
+浙江工业大学
+Zhejiang University of Technology
+浙江	理工	43.0
+77
+东北财经大学
+东北财经大学
+Dongbei University of Finance and Economics
+辽宁	财经	43.0
+77
+河海大学
+河海大学
+Hohai University
+双一流/211
+
+江苏	理工	43.0
+77
+中国矿业大学
+中国矿业大学
+China University of Mining and Technology
+双一流/211
+
+江苏	理工	43.0
+80
+北京工业大学
+北京工业大学
+Beijing University of Technology
+双一流/211
+
+北京	理工	43.0
+80
+中国石油大学（华东）
+中国石油大学（华东）
+China University of Petroleum (East China)
+双一流/211
+
+山东	理工	43.0
+82
+广东外语外贸大学
+广东外语外贸大学
+Guangdong University of Foreign Studies
+广东	语言	43.0
+83
+南京师范大学
+南京师范大学
+Nanjing Normal University
+双一流/211
+
+江苏	师范	42.0
+84
+中国政法大学
+中国政法大学
+China University of Political Science and Law
+双一流/211
+
+北京	政法	42.0
+85
+北京中医药大学
+北京中医药大学
+Beijing University of Chinese Medicine
+双一流/211
+
+北京	医药	42.0
+85
+西南交通大学
+西南交通大学
+Southwest Jiaotong University
+双一流/211
+
+四川	理工	42.0
+87
+华南师范大学
+华南师范大学
+South China Normal University
+双一流/211
+
+广东	师范	42.0
+87
+中国传媒大学
+中国传媒大学
+Communication University of China
+双一流/211
+
+北京	语言	42.0
+89
+北京林业大学
+北京林业大学
+Beijing Forestry University
+双一流/211
+
+北京	林业	42.0
+89
+江苏大学
+江苏大学
+Jiangsu University
+江苏	综合	42.0
+
+89
+深圳大学
+深圳大学
+Shenzhen University
+广东	综合	42.0
+92
+汕头大学
+汕头大学
+Shantou University
+广东	综合	42.0
+92
+首都经济贸易大学
+首都经济贸易大学
+Capital University of Economics & Business
+北京	财经	42.0
+92
+西北农林科技大学
+西北农林科技大学
+Northwest A&F University
+双一流/985/211
+
+陕西	农业	42.0
+95
+浙江师范大学
+浙江师范大学
+Zhejiang Normal University
+浙江	师范	41.0
+96
+安徽大学
+安徽大学
+Anhui University
+双一流/211
+
+安徽	综合	41.0
+97
+大连医科大学
+大连医科大学
+Dalian Medical University
+辽宁	医药	41.0
+97
+浙江理工大学
+浙江理工大学
+Zhejiang Sci-Tech University
+浙江	理工	41.0
+99
+南京邮电大学
+南京邮电大学
+Nanjing University of Posts and Telecommunications
+双一流
+
+江苏	理工	41.0
+100
+华侨大学
+华侨大学
+Huaqiao University
+福建	综合	41.0
+100
+宁波大学
+宁波大学
+Ningbo University
+双一流
+
+浙江	综合	41.0
+102
+西北大学
+西北大学
+Northwest University
+双一流/211
+
+陕西	综合	41.0
+103
+南京工业大学
+南京工业大学
+Nanjing Tech University
+江苏	理工	41.0
+103
+上海中医药大学
+上海中医药大学
+Shanghai University of Traditional Chinese Medicine
+双一流
+
+上海	医药	41.0
+105
+陕西师范大学
+陕西师范大学
+Shaanxi Normal University
+双一流/211
+
+陕西	师范	40.0
+105
+首都师范大学
+首都师范大学
+Capital Normal University
+双一流
+
+北京	师范	40.0
+105
+西交利物浦大学
+西交利物浦大学
+Xi'an Jiaotong-Liverpool University
+江苏	综合	40.0
+108
+杭州电子科技大学
+杭州电子科技大学
+Hangzhou Dianzi University
+浙江	理工	40.0
+109
+杭州师范大学
+杭州师范大学
+Hangzhou Normal University
+浙江	师范	40.0
+109
+燕山大学
+燕山大学
+Yanshan University
+河北	理工	40.0
+111
+大连海事大学
+大连海事大学
+Dalian Maritime University
+双一流/211
+
+辽宁	理工	40.0
+111
+河北工业大学
+河北工业大学
+Hebei University of Technology
+双一流/211
+
+天津	理工	40.0
+111
+南京信息工程大学
+南京信息工程大学
+Nanjing University of Information Science & Technology
+双一流
+
+江苏	理工	40.0
+114
+中央民族大学
+中央民族大学
+Minzu University of China
+双一流/985/211
+
+北京	民族	40.0
+115
+沈阳药科大学
+沈阳药科大学
+Shenyang Pharmaceutical University
+辽宁	医药	40.0
+116
+天津财经大学
+天津财经大学
+Tianjin University of Finance & Economics
+天津	财经	39.0
+117
+哈尔滨医科大学
+哈尔滨医科大学
+Harbin Medical University
+黑龙江	医药	39.0
+118
+浙江工商大学
+浙江工商大学
+Zhejiang Gongshang University
+浙江	财经	39.0
+119
+长安大学
+长安大学
+Chang'an University
+双一流/211
+
+陕西	理工	39.0
+119
+湘潭大学
+湘潭大学
+Xiangtan University
+双一流
+
+湖南	综合	39.0
+
+121
+云南大学
+云南大学
+Yunnan University
+双一流/211
+
+云南	综合	39.0
+122
+重庆医科大学
+重庆医科大学
+Chongqing Medical University
+重庆	医药	39.0
+122
+南京财经大学
+南京财经大学
+Nanjing University of Finance & Economics
+江苏	财经	39.0
+122
+上海理工大学
+上海理工大学
+University of Shanghai for Science and Technology
+上海	理工	39.0
+125
+湖北大学
+湖北大学
+Hubei University
+湖北	综合	39.0
+125
+湖南师范大学
+湖南师范大学
+Hunan Normal University
+双一流/211
+
+湖南	师范	39.0
+127
+扬州大学
+扬州大学
+Yangzhou University
+江苏	综合	38.0
+128
+温州医科大学
+温州医科大学
+Wenzhou Medical University
+浙江	医药	38.0
+128
+浙江财经大学
+浙江财经大学
+Zhejiang University of Finance and Economics
+浙江	财经	38.0
+130
+安徽医科大学
+安徽医科大学
+Anhui Medical University
+安徽	医药	38.0
+130
+福建医科大学
+福建医科大学
+Fujian Medical University
+福建	医药	38.0
+132
+广东工业大学
+广东工业大学
+Guangdong University of Technology
+广东	理工	38.0
+133
+广州医科大学
+广州医科大学
+Guangzhou Medical University
+双一流
+
+广东	医药	38.0
+133
+河北医科大学
+河北医科大学
+Hebei Medical University
+河北	医药	38.0
+133
+辽宁大学
+辽宁大学
+Liaoning University
+双一流/211
+
+辽宁	综合	38.0
+133
+上海师范大学
+上海师范大学
+Shanghai Normal University
+上海	师范	38.0
+137
+河北大学
+河北大学
+Hebei University
+河北	综合	38.0
+137
+华南农业大学
+华南农业大学
+South China Agricultural University
+双一流
+
+广东	农业	38.0
+139
+南昌大学
+南昌大学
+Nanchang University
+双一流/211
+
+江西	综合	38.0
+139
+太原理工大学
+太原理工大学
+Taiyuan University of Technology
+双一流/211
+
+山西	理工	38.0
+141
+南京审计大学
+南京审计大学
+Nanjing Audit University
+江苏	财经	37.0
+142
+广西大学
+广西大学
+Guangxi University
+双一流/211
+
+广西	综合	37.0
+143
+山西大学
+山西大学
+Shanxi University
+双一流
+
+山西	综合	37.0
+143
+郑州大学
+郑州大学
+Zhengzhou University
+双一流/211
+
+河南	综合	37.0
+145
+广西医科大学
+广西医科大学
+Guangxi Medical University
+广西	医药	37.0
+146
+东北林业大学
+东北林业大学
+Northeast Forestry University
+双一流/211
+
+黑龙江	林业	37.0
+147
+东北农业大学
+东北农业大学
+Northeast Agricultural University
+双一流/211
+
+黑龙江	农业	37.0
+148
+武汉科技大学
+武汉科技大学
+Wuhan University of Science and Technology
+湖北	理工	37.0
+149
+石家庄铁道大学
+石家庄铁道大学
+Shijiazhuang Tiedao University
+河北	理工	37.0
+150
+渤海大学
+渤海大学
+Bohai University
+辽宁	综合	37.0
