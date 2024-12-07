@@ -88,6 +88,8 @@ class ShangHaiRanking {
             TYPE.ARWU -> TODO()
         }
 
+        config.comment += " more see https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
+
         println("prepare wikidata")
         login()
         wbdf = WikibaseDataFetcher(connection, Datamodel.SITE_WIKIDATA)
