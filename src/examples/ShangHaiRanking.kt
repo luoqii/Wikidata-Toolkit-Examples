@@ -37,8 +37,12 @@ class ShangHaiRanking {
     val VALID_DATASET_ONLY = false
 
     fun parseDataAndUpload2wikidata() {
-        //bcur
-//        processDataSet("2023")
+        //arwu
+        processDataSet("2020", TYPE.ARWU)
+//        processDataSet("2024", TYPE.ARWU)
+
+
+//        bcur
 //        processDataSet("2015", TYPE.BCUR)
 //        processDataSet("2016", TYPE.BCUR)
 //        processDataSet("2017", TYPE.BCUR)
@@ -63,20 +67,36 @@ class ShangHaiRanking {
 
 
         var last: BcurRecord? = null
+        var accumulatedCount = 0
         records.forEachIndexed { index, bcurRecord ->
             if (null != last) {
-//                if (last?.ranking != bcurRecord.ranking - 1) {
-//                    println("last:$last curent:$bcurRecord")
-//                    return
-//                }
+                if (last!!.ranking == bcurRecord.ranking) {
+                    accumulatedCount++
+                    println("last:$last curent:$bcurRecord")
+                } else if (last!!.ranking < bcurRecord.ranking){
+                    if (last!!.ranking + 1 == bcurRecord.ranking) {
+
+                    } else if ((index + 1).toLong() != bcurRecord.ranking) {
+                        println("invalid data last:$last current:$bcurRecord")
+                        return
+                    }
+                    accumulatedCount = 0
+                } else {
+                    println("invalid interval last:$last current:$bcurRecord")
+                    return
+                }
+
                 if (last?.universityName.equals(bcurRecord.universityName)) {
-                    println("last:$last current:$bcurRecord")
+                    println("invalid name last:$last current:$bcurRecord")
                     return
                 }
             }
             last = bcurRecord
         }
         if (VALID_DATASET_ONLY) {
+            records.forEach {
+                println("$it")
+            }
             return
         }
 
@@ -92,10 +112,10 @@ class ShangHaiRanking {
         }
         config.comment = when (type) {
             TYPE.BCUR -> "增加" + config.year + "年 软科中国大学排名數據"
-            TYPE.ARWU -> TODO()
+            TYPE.ARWU -> "增加" + config.year + "年 软科世界大学学术排名數據"
         }
 
-        config.comment += " top150  more see https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
+        config.comment += " top ${records.size}  more see https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
 
         println("prepare wikidata")
         login()
@@ -249,7 +269,8 @@ class ShangHaiRanking {
 
         when (action) {
             Action.NOP -> {}
-            Action.ADD_ITEM -> {}
+            Action.ADD_ITEM -> {
+                println("TODO ADD_ITEM")}
             Action.ADD_STATEMENT -> {
                 val reference = ReferenceBuilder
                         .newInstance()
@@ -283,7 +304,7 @@ class ShangHaiRanking {
                 println("create statement successfully")
             }
             Action.UPDATE_STATEMENT_REFERENCE -> {
-
+                println("TODO UPDATE_STATEMENT_REFERENCE")
             }
         }
 
@@ -324,8 +345,10 @@ class ShangHaiRanking {
                 }
             }
         } catch (e: FileNotFoundException) {
+            e.printStackTrace()
             throw RuntimeException(e)
         } catch (e: IOException) {
+            e.printStackTrace()
             throw RuntimeException(e)
         }
 //        for (r in records) {
