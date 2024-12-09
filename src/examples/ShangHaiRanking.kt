@@ -38,7 +38,7 @@ class ShangHaiRanking {
 
     fun parseDataAndUpload2wikidata() {
         //arwu
-        processDataSet("2020", TYPE.ARWU)
+//        processDataSet("2020", TYPE.ARWU)
 //        processDataSet("2024", TYPE.ARWU)
 
 
@@ -53,8 +53,8 @@ class ShangHaiRanking {
 //        processDataSet("2022", TYPE.BCUR)
 //        processDataSet("2023", TYPE.BCUR)
 
-        //arwu
-//        processDataSet("2024", TYPE.ARWU)
+//                processDataSet("2023", TYPE.BCVCR)
+                processDataSet("2024", TYPE.BCVCR)
     }
 
     private fun processDataSet(year: String, type: TYPE) {
@@ -109,10 +109,12 @@ class ShangHaiRanking {
         config.qidDeterminateMethod = when (type) {
             TYPE.BCUR -> "Q56274575"
             TYPE.ARWU -> "Q478743"
+            TYPE.BCVCR -> "Q131413842"
         }
         config.comment = when (type) {
             TYPE.BCUR -> "增加" + config.year + "年 软科中国大学排名數據"
             TYPE.ARWU -> "增加" + config.year + "年 软科世界大学学术排名數據"
+            TYPE.BCVCR -> "增加" + config.year + "年 软科中国高职院校排名數據"
         }
 
         config.comment += " top ${records.size}  more see https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
@@ -413,7 +415,8 @@ class ShangHaiRanking {
 
     enum class TYPE(val type: String) {
         BCUR("bcur"),
-        ARWU("arwu")
+        ARWU("arwu"),
+        BCVCR("bcvcr"),
     }
 
 }
