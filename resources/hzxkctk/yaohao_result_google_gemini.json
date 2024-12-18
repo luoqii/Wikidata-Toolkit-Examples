@@ -1,0 +1,22 @@
+{
+  "_comment": "如何自成：https://gemini.google.com/ 1.5 Flash 3step: 1, past url; 2, json ; 3, copy generated json to end of this file",
+
+  "generatedData": [
+    {
+      "title": "杭州市2024年11月份小客车增量指标摇号结果公告",
+      "publishTime": "2024-11-26 15:05:19",
+      "totalQuotas": 7477,
+      "individualQuotas": 6467,
+      "unitQuotas": 1010,
+      "individualParticipants": 385633,
+      "unitParticipants": 7991,
+      "queryUrl": "浙江政务服务网或浙里办APP",
+      "quotaValidity": "12个月",
+      "forfeitConsequences": "逾期未使用的，视为放弃指标且自有效期届满次日起，两年内不得申请增量指标",
+      "individualResultMD5": "8adf12207978cbe3f81877778236c7da",
+      "unitResultMD5": "e14e6b1efe910ae0909023bb8d7ae38f"
+    }
+
+
+  ]
+}

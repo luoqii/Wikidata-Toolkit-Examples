@@ -1,0 +1,716 @@
+# 以#开头的，或者空行都视为注释，下面的空行也是注释
+
+# 这个文件如何生成的
+# 1，https://www.shanghairanking.cn/rankings/bcvcr/2023 选择中文
+# 2，选中每一页的排名信息，CTRL_C,然后在 CTRL_V到本文件末尾
+
+#page 1
+1
+金华职业技术学院
+金华职业技术学院
+Jinhua Polytechnic
+双高/示范性高职院校
+
+浙江	353.0	1
+2
+天津市职业大学
+天津市职业大学
+Tianjin Vocational Institute
+双高/示范性高职院校
+
+天津	280.5	5
+3
+广州番禺职业技术学院
+广州番禺职业技术学院
+Guangzhou Panyu Polytechnic
+双高/示范性高职院校
+
+广东	264.8	8
+4
+宁波职业技术学院
+宁波职业技术学院
+Ningbo Polytechnic
+双高/示范性高职院校
+
+浙江	261.2	10
+5
+淄博职业学院
+淄博职业学院
+Zibo Vocational Institute
+双高/示范性高职院校
+
+山东	243.9	13
+6
+长沙民政职业技术学院
+长沙民政职业技术学院
+Changsha Social Work College
+双高/示范性高职院校
+
+湖南	236.6	15
+7
+顺德职业技术学院
+顺德职业技术学院
+Shunde Polytechnic
+双高/骨干高职院校
+
+广东	226.5	17
+8
+杭州职业技术学院
+杭州职业技术学院
+Hangzhou Vocational & Technical College
+双高/骨干高职院校
+
+浙江	205.6	23
+9
+温州职业技术学院
+温州职业技术学院
+Wenzhou Polytechnic
+双高/示范性高职院校
+
+浙江	204.1	25
+10
+日照职业技术学院
+日照职业技术学院
+Rizhao Polytechnic
+双高/示范性高职院校
+
+山东	203.8	26
+11
+南宁职业技术学院
+南宁职业技术学院
+Nanning College For Vocational Technology
+双高/示范性高职院校
+
+广西	197.7	29
+12
+九江职业技术学院
+九江职业技术学院
+Jiujiang Vocational And Technical College
+双高/示范性高职院校
+
+江西	191.5	35
+13
+滨州职业学院
+滨州职业学院
+Binzhou Polytechnic
+双高/骨干高职院校
+
+山东	188.7	39
+14
+哈尔滨职业技术学院
+哈尔滨职业技术学院
+Harbin Vocational & Technical College
+双高/骨干高职院校
+
+黑龙江	185.1	44
+15
+潍坊职业学院
+潍坊职业学院
+Weifang Vocational College
+双高
+
+山东	179.0	47
+16
+重庆城市管理职业学院
+重庆城市管理职业学院
+Chongqing City Management College
+双高/骨干高职院校
+
+重庆	175.0	50
+17
+柳州职业技术学院
+柳州职业技术学院
+Liuzhou Vocational & Technical College
+双高/示范性高职院校
+
+广西	171.5	55
+18
+宁夏职业技术学院
+宁夏职业技术学院
+Ningxia Polytechnic
+双高/示范性高职院校
+
+宁夏	166.7	61
+19
+成都职业技术学院
+成都职业技术学院
+Chengdu Polytechnic
+双高/骨干高职院校
+
+四川	161.4	65
+20
+襄阳职业技术学院
+襄阳职业技术学院
+Xiangyang Vocational And Technical College
+双高
+
+湖北	161.0	66
+21
+青岛职业技术学院
+青岛职业技术学院
+Qingdao Technical College
+双高/示范性高职院校
+
+山东	159.9	68
+22
+济南职业学院
+济南职业学院
+Jinan Vocational College
+双高/骨干高职院校
+
+山东	158.7	71
+23
+黎明职业大学
+黎明职业大学
+Liming Vocational University
+双高
+
+福建	146.0	94
+24
+浙江工贸职业技术学院
+浙江工贸职业技术学院
+Zhejiang Industry & Trade Vocational College
+双高
+
+浙江	145.5	97
+25
+烟台职业学院
+烟台职业学院
+Yantai Vocational College
+双高/骨干高职院校
+
+山东	137.6	124
+26
+武汉城市职业学院
+武汉城市职业学院
+Wuhan City Polytechnic
+湖北	136.7	125
+27
+铜仁职业技术学院
+铜仁职业技术学院
+Tongren Polytechnic College
+双高/骨干高职院校
+
+贵州	134.2	136
+28
+黑龙江职业学院
+黑龙江职业学院
+Heilongjiang Polytechnic
+双高/骨干高职院校
+
+黑龙江	134.0	137
+29
+威海职业学院
+威海职业学院
+Weihai Vocational College
+双高/示范性高职院校
+
+山东	132.7	140
+30
+咸阳职业技术学院
+咸阳职业技术学院
+Xianyang Vocational Technical College
+双高
+
+陕西	129.8	145
+
+31
+许昌职业技术学院
+许昌职业技术学院
+Xuchang Vocational Technical College
+双高
+
+河南	129.5	146
+32
+天津现代职业技术学院
+天津现代职业技术学院
+Tianjin Modern Vocational Technology College
+双高/骨干高职院校
+
+天津	128.6	150
+33
+重庆工商职业学院
+重庆工商职业学院
+Chongqing Technology And Business Institute
+双高/骨干高职院校
+
+重庆	128.3	153
+34
+江苏食品药品职业技术学院
+江苏食品药品职业技术学院
+Jiangsu Food & Pharmaceutical Science College
+双高/骨干高职院校
+
+江苏	127.2	155
+35
+石家庄职业技术学院
+石家庄职业技术学院
+Shijiazhuang University Of Applied Technology
+双高
+
+河北	127.1	157
+36
+福州职业技术学院
+福州职业技术学院
+Fuzhou Polytechnic
+双高
+
+福建	124.4	165
+37
+广东农工商职业技术学院
+广东农工商职业技术学院
+Guangdong Aib Polytechnic
+广东	124.2	166
+38
+天津渤海职业技术学院
+天津渤海职业技术学院
+Tianjin Bohai Vocational Technology College
+双高
+
+天津	122.0	172
+39
+上海出版印刷高等专科学校
+上海出版印刷高等专科学校
+Shanghai Publishing And Printing College
+骨干高职院校
+
+上海	121.2	175
+40
+包头职业技术学院
+包头职业技术学院
+Baotou Vocational & Technical College
+示范性高职院校
+
+内蒙古	118.2	186
+41
+中山职业技术学院
+中山职业技术学院
+Zhongshan Polytechnic
+广东	116.5	190
+42
+宁波城市职业技术学院
+宁波城市职业技术学院
+Ningbo City College Of Vocational Technology
+浙江	116.2	191
+43
+东营职业学院
+东营职业学院
+Dongying Vocational Institute
+双高/骨干高职院校
+
+山东	115.4	196
+44
+江西工业贸易职业技术学院
+江西工业贸易职业技术学院
+Jiangxi Vocational Technical College Of Lndustry & Trade
+江西	114.2	202
+45
+大连职业技术学院
+大连职业技术学院
+Dalian Vocational Technical College
+示范性高职院校
+
+辽宁	112.6	204
+46
+浙江工业职业技术学院
+浙江工业职业技术学院
+Zhejiang Industry Polytechnic College
+浙江	111.9	205
+47
+厦门城市职业学院
+厦门城市职业学院
+Xiamen City University
+福建	110.2	209
+48
+佛山职业技术学院
+佛山职业技术学院
+Foshan Polytechnic
+广东	109.9	210
+49
+锡林郭勒职业学院
+锡林郭勒职业学院
+Xilingol Vocational College
+内蒙古	109.3	214
+50
+扬州市职业大学
+扬州市职业大学
+Yangzhou Polytechnic College
+江苏	108.3	221
+51
+陕西职业技术学院
+陕西职业技术学院
+Shaanxi Vocational And Technical College
+双高/骨干高职院校
+
+陕西	104.7	233
+52
+济宁职业技术学院
+济宁职业技术学院
+Jining Polytechnic
+山东	104.6	235
+53
+泸州职业技术学院
+泸州职业技术学院
+Luzhou Vocational And Technical College
+四川	104.2	237
+53
+山东理工职业学院
+山东理工职业学院
+Shandong Polytechnic College
+山东	104.2	237
+55
+岳阳职业技术学院
+岳阳职业技术学院
+Yueyang Vocational Technical College
+双高
+
+湖南	104.1	240
+56
+黑龙江农垦职业学院
+黑龙江农垦职业学院
+Heilongjiang Agricultural Reclamation Vocational College，Arvc
+黑龙江	103.6	242
+57
+沈阳职业技术学院
+沈阳职业技术学院
+Shenyang Polytechnic College
+双高/示范性高职院校
+
+辽宁	103.5	243
+58
+山东商务职业学院
+山东商务职业学院
+Shandong Business Institute
+山东	101.9	250
+59
+湖北职业技术学院
+湖北职业技术学院
+Hubei Polytechnic Institute
+双高/示范性高职院校
+
+湖北	101.0	255
+60
+莱芜职业技术学院
+莱芜职业技术学院
+Laiwu Vocational And Technical College
+山东	100.7	259
+
+61
+唐山职业技术学院
+唐山职业技术学院
+Tangshan Vocational & Technical College
+河北	100.2	261
+62
+乌鲁木齐职业大学
+乌鲁木齐职业大学
+Urumqi Vocational University
+骨干高职院校
+
+新疆	99.8	264
+63
+珠海城市职业技术学院
+珠海城市职业技术学院
+Zhuhai City Polytechnic
+广东	99.2	265
+64
+绵阳职业技术学院
+绵阳职业技术学院
+Mianyang Polytechnic
+示范性高职院校
+
+四川	98.3	269
+65
+湖南科技职业学院
+湖南科技职业学院
+Hunan Vocational College Of Technology
+骨干高职院校
+
+湖南	97.3	276
+66
+合肥职业技术学院
+合肥职业技术学院
+Hefei Technology College
+安徽	96.5	278
+67
+嘉兴职业技术学院
+嘉兴职业技术学院
+Jiaxing Vocational & Technical College
+浙江	95.9	285
+68
+乐山职业技术学院
+乐山职业技术学院
+Leshan Vocational And Technical College
+四川	95.8	287
+69
+重庆三峡职业学院
+重庆三峡职业学院
+Chongqing Three Gorges Vocational College
+双高
+
+重庆	95.6	289
+70
+鄂州职业大学
+鄂州职业大学
+Ezhou Polytechnic
+骨干高职院校
+
+湖北	95.5	290
+71
+开封大学
+开封大学
+Kaifeng University
+河南	93.6	300
+72
+海南职业技术学院
+海南职业技术学院
+Hainan College Of Vocation And Technique
+示范性高职院校
+
+海南	93.1	303
+73
+黔东南民族职业技术学院
+黔东南民族职业技术学院
+Qiandongnan National Polytechnic
+贵州	92.6	308
+74
+济源职业技术学院
+济源职业技术学院
+Jiyuan Vocational And Technical College
+河南	92.4	310
+75
+雅安职业技术学院
+雅安职业技术学院
+Ya'An Polytechnic College
+四川	91.8	315
+76
+台州职业技术学院
+台州职业技术学院
+Taizhou Vocational And Technical College
+浙江	91.5	319
+77
+聊城职业技术学院
+聊城职业技术学院
+Liaocheng Vocational And Technical College
+山东	91.1	322
+78
+永州职业技术学院
+永州职业技术学院
+Yongzhou Vocational Technical College
+示范性高职院校
+
+湖南	90.5	326
+79
+丽水职业技术学院
+丽水职业技术学院
+Lishui Vocational And Technical College
+浙江	90.2	330
+80
+广州城市职业学院
+广州城市职业学院
+Guangzhou City Polytechnic
+广东	89.1	340
+81
+天津城市职业学院
+天津城市职业学院
+Tianjin City Vocational College
+天津	88.1	352
+82
+新疆职业大学
+新疆职业大学
+Xinjiang Vocational University
+新疆	87.0	364
+83
+贵州职业技术学院
+贵州职业技术学院
+Guizhou Vocational Technology Institute
+贵州	86.9	366
+83
+咸宁职业技术学院
+咸宁职业技术学院
+Xianning Vocational Technical College
+湖北	86.9	366
+85
+眉山职业技术学院
+眉山职业技术学院
+Meishan Vocational And Technical College
+四川	86.2	377
+86
+九江职业大学
+九江职业大学
+Jiujiang Vocational University
+江西	85.9	378
+87
+遵义职业技术学院
+遵义职业技术学院
+Zunyi Vocational And Technical College
+贵州	85.4	383
+88
+河源职业技术学院
+河源职业技术学院
+Heyuan Polytechnic
+广东	85.2	385
+89
+湖州职业技术学院
+湖州职业技术学院
+Huzhou Vocational & Technical College
+浙江	85.0	387
+89
+晋中职业技术学院
+晋中职业技术学院
+Jinzhong Vocational And Technical College
+山西	85.0	387
+
+89
+四川职业技术学院
+四川职业技术学院
+Sichuan Vocational And Technical College
+四川	85.0	387
+92
+商丘职业技术学院
+商丘职业技术学院
+Shangqiu Polytechnic
+示范性高职院校
+
+河南	84.2	400
+93
+广安职业技术学院
+广安职业技术学院
+Guang'An Vocational Technical College
+四川	83.6	408
+94
+长沙职业技术学院
+长沙职业技术学院
+Changsha Vocational & Technical College
+湖南	83.3	411
+95
+兰州职业技术学院
+兰州职业技术学院
+Lanzhou Vocational Technical College
+甘肃	83.1	414
+96
+天津海运职业学院
+天津海运职业学院
+Tianjin Maritime College
+天津	82.3	424
+97
+保定职业技术学院
+保定职业技术学院
+Baoding Vocational And Technical College
+河北	81.7	430
+97
+宜宾职业技术学院
+宜宾职业技术学院
+Yibin Vocational And Technical College
+骨干高职院校
+
+四川	81.7	430
+97
+宜春职业技术学院
+宜春职业技术学院
+Yichun Vocational Technical College
+江西	81.7	430
+100
+信阳职业技术学院
+信阳职业技术学院
+Xinyang Vocational And Technical College
+河南	81.6	434
+100+
+阿坝职业学院
+阿坝职业学院
+Aba Vocational College
+四川
+100+
+阿克苏职业技术学院
+阿克苏职业技术学院
+Aks Vocational And Technical College
+新疆
+100+
+阿拉善职业技术学院
+阿拉善职业技术学院
+Alashan Vocational College
+内蒙古
+100+
+安徽新闻出版职业技术学院
+安徽新闻出版职业技术学院
+Anhui Vocational College Of Press And Publishing
+安徽
+100+
+安康职业技术学院
+安康职业技术学院
+Ankang Vocational Technical College
+陕西
+100+
+安顺职业技术学院
+安顺职业技术学院
+Anshun Vocational And Technical College
+贵州
+100+
+北海职业学院
+北海职业学院
+Beihai Vocational College
+广西
+100+
+毕节职业技术学院
+毕节职业技术学院
+Bijie Vocational And Technical College
+贵州
+100+
+沧州职业技术学院
+沧州职业技术学院
+Cangzhou Technical College
+河北
+100+
+常德职业技术学院
+常德职业技术学院
+Changde Vocational Technical College
+湖南
+100+
+郴州职业技术学院
+郴州职业技术学院
+Chenzhou Vocational Technical College
+湖南
+100+
+成都工贸职业技术学院
+成都工贸职业技术学院
+Chengdu Industry And Trade College
+四川
+100+
+重庆城市职业学院
+重庆城市职业学院
+Chongqing City Vocational College
+重庆
+100+
+重庆青年职业技术学院
+重庆青年职业技术学院
+Chongqing Youth Vocational & Technical College
+重庆
+100+
+滁州城市职业学院
+滁州城市职业学院
+Chuzhou City Vocation Academy
+安徽
+100+
+达州职业技术学院
+达州职业技术学院
+Dazhou Vocational And Technial College
+四川
+100+
+大兴安岭职业学院
+大兴安岭职业学院
+Vocational College Daxing'An Mountains
+黑龙江
+100+
+德宏职业学院
+德宏职业学院
+Dehong Vocational College
+云南
+100+
+德州职业技术学院
+德州职业技术学院
+Dezhou Vocational And Technical College
+山东
+100+
+恩施职业技术学院
+恩施职业技术学院
+Enshi Polytechnic
+湖北

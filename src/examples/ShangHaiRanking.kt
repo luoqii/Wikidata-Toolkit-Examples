@@ -38,7 +38,11 @@ class ShangHaiRanking {
 
     fun parseDataAndUpload2wikidata() {
         //arwu
+        processDataSet("2019", TYPE.ARWU)
 //        processDataSet("2020", TYPE.ARWU)
+//        processDataSet("2021", TYPE.ARWU)
+//        processDataSet("2022", TYPE.ARWU)
+//        processDataSet("2023", TYPE.ARWU)
 //        processDataSet("2024", TYPE.ARWU)
 
 
@@ -54,7 +58,7 @@ class ShangHaiRanking {
 //        processDataSet("2023", TYPE.BCUR)
 
 //                processDataSet("2023", TYPE.BCVCR)
-                processDataSet("2024", TYPE.BCVCR)
+//                processDataSet("2024", TYPE.BCVCR)
     }
 
     private fun processDataSet(year: String, type: TYPE) {
@@ -63,7 +67,9 @@ class ShangHaiRanking {
         config.year = year
         val records = parseResource("./resources/" +
                 type.type +
-                "_" + config.year + "_zh.data.txt")
+                "_" + config.year + "_" +
+                "zh" +
+                ".data.txt")
 
 
         var last: BcurRecord? = null
@@ -113,11 +119,12 @@ class ShangHaiRanking {
         }
         config.comment = when (type) {
             TYPE.BCUR -> "增加" + config.year + "年 软科中国大学排名數據"
-            TYPE.ARWU -> "增加" + config.year + "年 软科世界大学学术排名數據"
+            TYPE.ARWU -> "增加" + config.year + "年 ShanghaiRanking's Academic Ranking of World Universities"
             TYPE.BCVCR -> "增加" + config.year + "年 软科中国高职院校排名數據"
         }
 
-        config.comment += " top ${records.size}  more see https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
+        config.comment += " top ${records.size}  more see " +
+                "https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
 
         println("prepare wikidata")
         login()
@@ -147,20 +154,24 @@ class ShangHaiRanking {
             return
         }
 
+        var siteKey = "zhwiki"
+        if (type == TYPE.ARWU) {
+            siteKey = "enwiki"
+        }
         if (PROCESS_FIRST_RECORD_ONLY) {
-            process(wbdf!!, wbde!!, records[0], config)
+            process(wbdf!!, wbde!!, records[0], config, siteKey)
         } else {
             records.forEach {
-                process(wbdf!!, wbde!!, it, config)
+                process(wbdf!!, wbde!!, it, config, siteKey)
             }
         }
     }
 
-    fun process(fetcher: WikibaseDataFetcher, editor: WikibaseDataEditor, record: BcurRecord, config: Config){
+    fun process(fetcher: WikibaseDataFetcher, editor: WikibaseDataEditor, record: BcurRecord, config: Config, siteKey: String){
         println("")
         System.out.println("process record:$record")
         var action = Action.NOP
-        val university = fetcher.getEntityDocumentByTitle("zhwiki", record.universityName)
+        val university = fetcher.getEntityDocumentByTitle(siteKey, record.universityName)
         var item: ItemDocument? = null
         if (university is ItemDocument) {
             item = university

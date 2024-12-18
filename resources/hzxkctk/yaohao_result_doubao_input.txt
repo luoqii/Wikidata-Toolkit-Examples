@@ -1,0 +1,68 @@
+https://hzxkctk.cn/tzgg/20241126/1732604719094_1.html
+https://hzxkctk.cn/tzgg/20241028/1730099804560_1.html
+https://hzxkctk.cn/tzgg/2024926/1727335217273_1.html
+https://hzxkctk.cn/tzgg/2024827/1724743033849_1.html
+https://hzxkctk.cn/tzgg/2024726/1721977929825_1.html
+
+这些网页 只需要 “单位和个人配置增量指标”， “个人指标”， “单位指标”，“个人有效编码数”，“单位有效编码数”，“标题”，“时间”,“MD5码” 这些信息，key 使用英文,并合成一个json 数组数据
+
+ttps://hzxkctk.cn/tzgg/index_3.html
+找到这个网页里所有标摇号结果公告链接，再将对应链接的网页内容里的  “单位和个人配置增量指标”， “个人指标”， “单位指标”，“个人有效编码数”，“单位有效编码数”，“标题”，“时间”,“MD5码“ 这些信息，key 使用英文,并合成一个json 数组数据
+
+https://hzxkctk.cn/tzgg/index_1.html
+https://hzxkctk.cn/tzgg/index_2.html
+https://hzxkctk.cn/tzgg/index_3.html
+https://hzxkctk.cn/tzgg/index_4.html
+https://hzxkctk.cn/tzgg/index_5.html
+https://hzxkctk.cn/tzgg/index_6.html
+https://hzxkctk.cn/tzgg/index_7.html
+https://hzxkctk.cn/tzgg/index_8.html
+https://hzxkctk.cn/tzgg/index_9.html
+https://hzxkctk.cn/tzgg/index_10.html
+https://hzxkctk.cn/tzgg/index_11.html
+https://hzxkctk.cn/tzgg/index_12.html
+https://hzxkctk.cn/tzgg/index_13.html
+https://hzxkctk.cn/tzgg/index_14.html
+https://hzxkctk.cn/tzgg/index_15.html
+https://hzxkctk.cn/tzgg/index_16.html
+https://hzxkctk.cn/tzgg/index_17.html
+https://hzxkctk.cn/tzgg/index_18.html
+https://hzxkctk.cn/tzgg/index_19.html
+https://hzxkctk.cn/tzgg/index_20.html
+https://hzxkctk.cn/tzgg/index_21.html
+https://hzxkctk.cn/tzgg/index_22.html
+https://hzxkctk.cn/tzgg/index_23.html
+https://hzxkctk.cn/tzgg/index_24.html
+https://hzxkctk.cn/tzgg/index_25.html
+https://hzxkctk.cn/tzgg/index_26.html
+https://hzxkctk.cn/tzgg/index_27.html
+https://hzxkctk.cn/tzgg/index_28.html
+https://hzxkctk.cn/tzgg/index_29.html
+https://hzxkctk.cn/tzgg/index_30.html
+找到这个网页里所有标摇号结果公告链接，再将对应链接的网页内容里的下列数据：
+“单位和个人配置增量指标”，
+ “个人指标”，
+ “单位指标”，
+ “个人有效编码数”，
+ “单位有效编码数”，
+ “标题”，
+ “时间”,
+ “MD5码：“， 提取表面波，合成一个json 数组数据，key 使用英文, 输出结果
+
+
+
+ https://hzxkctk.cn/tzgg/index_{index}.html
+ index取值 从1循环到49，请遍历所有的网页，并
+找到对应网页里所有标摇号结果公告链接，再将对应链接的网页内容里的下列数据：
+“单位和个人配置增量指标”，
+ “个人指标”，
+ “单位指标”，
+ “个人有效编码数”，
+ “单位有效编码数”，
+ “标题”，
+ “时间”,
+ “MD5码：“， 提取表面波，合成一个json 数组数据，key 使用英文, 输出结果
+
+
+  https://hzxkctk.cn/tzgg/index_{index}.html
+ index取值 从1循环到49，输出所有的网页

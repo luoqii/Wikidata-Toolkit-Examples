@@ -1,0 +1,55 @@
+{
+  "_comment": "https://www.doubao.com/chat",
+  "_comment": "3step:",
+  "_comment": "1, past url;",
+  "_comment": "2, 只需要 “单位和个人配置增量指标”， “个人指标”， “单位指标”，“个人有效编码数”，“单位有效编码数”，“标题”，“时间”,“MD5码” 这些信息，key 使用英文",
+  "_comment": "3, copy generated json to end of this file",
+
+  "generatedData": [
+    {
+      "TotalIncrementQuota": 7477,
+      "PersonalQuota": 6467,
+      "CompanyQuota": 1010,
+      "PersonalValidCodeNumber": 385633,
+      "CompanyValidCodeNumber": 7991,
+      "Title": "2024 年 11 杭州市小客车增量指标摇号结果公告",
+      "Time": "2024-11-26 15:05:19",
+      "PersonalMD5Code": "8adf12207978cbe3f81877778236c7da",
+      "CompanyMD5Code": "e14e6b1efe910ae0909023bb8d7ae38f"
+    },
+    {
+      "TotalIncrementQuota": 6733,
+      "PersonalQuota": 5776,
+      "CompanyQuota": 957,
+      "PersonalValidCodeNumber": 406505,
+      "CompanyValidCodeNumber": 8462,
+      "Title": "2024 年 10 杭州市小客车增量指标摇号结果公告",
+      "Time": "2024-10-28 15:17:06",
+      "PersonalMD5Code": "cabd77e75c69ebc69a67d77c93d4910e",
+      "CompanyMD5Code": "29dee60b4f89c4a2615c8e6fc8933bbf"
+    },
+    {
+      "TotalIncrementQuota": 17510,
+      "PersonalQuota": 16323,
+      "CompanyQuota": 1187,
+      "PersonalValidCodeNumber": 436177,
+      "CompanyValidCodeNumber": 9308,
+      "Title": "2024 年 9 杭州市小客车增量指标摇号结果公告",
+      "Time": "2024-09-26 15:21:10",
+      "PersonalMD5Code": "115978433d17c5abe0621a9dab022670",
+      "CompanyMD5Code": "4be7aa6b46e2b60692ab38694575cfd9"
+    },
+    {
+      "TotalIncrementQuota": 7022,
+      "PersonalQuota": 6123,
+      "CompanyQuota": 899,
+      "PersonalValidCodeNumber": 533534,
+      "CompanyValidCodeNumber": 9561,
+      "Title": "2024 年 8 杭州市小客车增量指标摇号结果公告",
+      "Time": "2024-08-27 15:18:49",
+      "PersonalMD5Code": "2e896ea2a61e01838b8bfc147fcc4b28",
+      "CompanyMD5Code": "beedbac6e4adc5639cc786688e746518"
+    }
+
+  ]
+}
