@@ -17,6 +17,7 @@ import java.io.IOException
 import java.math.BigDecimal
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 
 class ShangHaiRanking {
@@ -35,16 +36,51 @@ class ShangHaiRanking {
      * 僅僅驗證原始數據格式，測試用
      */
     val VALID_DATASET_ONLY = false
+    val DRY_RUN = false
+    var actionCountMap = HashMap<Action, Int>()
+
+    val enErrData: List<Title2Qid> = listOf(
+            Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108"),
+            Title2Qid("Swiss Federal Institute of Technology Zurich", "Q11942"),
+            Title2Qid("University of Michigan-Ann Arbor", "Q230492"),
+            Title2Qid("The University of Tokyo", "Q7842"),
+            Title2Qid("University of Wisconsin - Madison", "Q838330"),
+            Title2Qid("The University of Edinburgh", "Q160302"),
+            Title2Qid("The University of Manchester", "Q230899"),
+            Title2Qid("University of Paris-Sud (Paris 11)", "Q1480643"),
+            Title2Qid("University of Colorado at Boulder", "Q736674"),
+            Title2Qid("University of Illinois at Urbana-Champaign", "Q457281"),
+            Title2Qid("The University of Melbourne", "Q319078"),
+            Title2Qid("University of Minnesota, Twin Cities", "Q238101"),
+            Title2Qid("The University of Texas at Austin", "Q49213"),
+            Title2Qid("The University of Texas Southwestern Medical Center at Dallas", "Q2725999"),
+            Title2Qid("University of Munich", "Q55044"),
+            Title2Qid("The University of Queensland", "Q866012"),
+            Title2Qid("Technical University Munich", "Q157808"),
+            Title2Qid("The University of Texas M. D. Anderson Cancer Center", "Q1525831"),
+            Title2Qid("Purdue University - West Lafayette", "Q217741"),
+            Title2Qid("The Australian National University", "Q127990"),
+            Title2Qid("Swiss Federal Institute of Technology Lausanne", "Q262760"),
+            Title2Qid("Ecole Normale Superieure - Paris", "Q273604"),
+            Title2Qid("Technion-Israel Institute of Technology", "Q333705"),
+            Title2Qid("University of Pittsburgh, Pittsburgh Campus", "Q235034"),
+            Title2Qid("The University of New South Wales", "Q734764"),
+            Title2Qid("Pennsylvania State University - University Park", "Q7163241"),
+            Title2Qid("The University of Western Australia", "Q1517021"),
+            Title2Qid("The Ohio State University - Columbus", "Q309331"),
+    )
+    val zhErrData: List<Title2Qid> = listOf(
+            Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108")
+    )
 
     fun parseDataAndUpload2wikidata() {
         //arwu
-        processDataSet("2019", TYPE.ARWU)
+        processDataSet("2019", TYPE.ARWU, LANG.EN)
 //        processDataSet("2020", TYPE.ARWU)
 //        processDataSet("2021", TYPE.ARWU)
 //        processDataSet("2022", TYPE.ARWU)
 //        processDataSet("2023", TYPE.ARWU)
 //        processDataSet("2024", TYPE.ARWU)
-
 
 //        bcur
 //        processDataSet("2015", TYPE.BCUR)
@@ -57,18 +93,20 @@ class ShangHaiRanking {
 //        processDataSet("2022", TYPE.BCUR)
 //        processDataSet("2023", TYPE.BCUR)
 
-//                processDataSet("2023", TYPE.BCVCR)
-//                processDataSet("2024", TYPE.BCVCR)
+        //bcvcr
+//            processDataSet("2023", TYPE.BCVCR)
+//            processDataSet("2024", TYPE.BCVCR)
     }
 
-    private fun processDataSet(year: String, type: TYPE) {
+    private fun processDataSet(year: String, type: TYPE, lang: LANG = LANG.ZH) {
 
         val config = Config()
         config.year = year
         val records = parseResource("./resources/" +
+                type.type + "/" +
                 type.type +
                 "_" + config.year + "_" +
-                "zh" +
+                lang.lang +
                 ".data.txt")
 
 
@@ -117,14 +155,14 @@ class ShangHaiRanking {
             TYPE.ARWU -> "Q478743"
             TYPE.BCVCR -> "Q131413842"
         }
-        config.comment = when (type) {
+        config.comment += when (type) {
             TYPE.BCUR -> "增加" + config.year + "年 软科中国大学排名數據"
             TYPE.ARWU -> "增加" + config.year + "年 ShanghaiRanking's Academic Ranking of World Universities"
             TYPE.BCVCR -> "增加" + config.year + "年 软科中国高职院校排名數據"
         }
 
-        config.comment += " top ${records.size}  more see " +
-                "https://github.com/luoqii/Wikidata-Toolkit-Examples/blob/master/src/examples/ShangHaiRanking.kt"
+        config.comment += " top ${records.size}. more see " +
+                "[[User:Bangbang.S/shanghairanking|here]]"
 
         println("prepare wikidata")
         login()
@@ -155,30 +193,48 @@ class ShangHaiRanking {
         }
 
         var siteKey = "zhwiki"
-        if (type == TYPE.ARWU) {
+        if (lang == LANG.EN) {
             siteKey = "enwiki"
         }
+        actionCountMap.clear()
         if (PROCESS_FIRST_RECORD_ONLY) {
-            process(wbdf!!, wbde!!, records[0], config, siteKey)
+            process(wbdf!!, wbde!!, records[0], config, siteKey, lang)
         } else {
             records.forEach {
-                process(wbdf!!, wbde!!, it, config, siteKey)
+                process(wbdf!!, wbde!!, it, config, siteKey, lang)
             }
         }
+        actionCountMap.forEach { t, u -> println("count for $t is $u") }
     }
 
-    fun process(fetcher: WikibaseDataFetcher, editor: WikibaseDataEditor, record: BcurRecord, config: Config, siteKey: String){
+    fun process(fetcher: WikibaseDataFetcher,
+                editor: WikibaseDataEditor,
+                record: BcurRecord,
+                config: Config,
+                siteKey: String,
+                lang: LANG){
         println("")
         System.out.println("process record:$record")
         var action = Action.NOP
-        val university = fetcher.getEntityDocumentByTitle(siteKey, record.universityName)
+        var university = fetcher.getEntityDocumentByTitle(siteKey, record.universityName)
+        if (null == university) {
+            println("try with errData")
+            val list = if (lang == LANG.EN) {enErrData} else {zhErrData}
+            list.forEach {
+                if (it.title.contentEquals(record.universityName)) {
+                    university = fetcher.getEntityDocument(it.qid)
+                    println("found it ${it.qid}")
+                    return@forEach
+                }
+            }
+        }
         var item: ItemDocument? = null
         if (university is ItemDocument) {
-            item = university
+            item = university as ItemDocument
             try {
                 println("${item.entityId}")
-                println("學校中文名："
-                        + item.labels["zh"]!!.text)
+                println("學校名："
+                        + item.labels[lang.lang]!!.text)
             } catch (e: Exception) {
 
             }
@@ -187,7 +243,7 @@ class ShangHaiRanking {
             var foundMatchedPoninttime = false
             var foundMatchedDeterminateMethod = false
             var foundMatchReference = false
-            for (g in university.statementGroups) {
+            for (g in (university as ItemDocument).statementGroups) {
                 if (g.property.id.equals(config.pidRanking, true)) {
                     foundMatchedRanking = false
                     foundMatchedPoninttime = false
@@ -279,7 +335,11 @@ class ShangHaiRanking {
         }
 
         println("action:$action")
+        actionCountMap.set(action, actionCountMap.getOrDefault(action, 0) + 1)
 
+        if (DRY_RUN) {
+            return
+        }
         when (action) {
             Action.NOP -> {}
             Action.ADD_ITEM -> {
@@ -313,7 +373,11 @@ class ShangHaiRanking {
                         .withStatement(statement)
                         .build()
 //                editor.createItemDocument(itemDocument, config.comment, config.tags)
-                editor.updateStatements(item!!.entityId, listOf(statement), emptyList(), config.comment, config.tags)
+                editor.updateStatements(item!!.entityId,
+                        listOf(statement),
+                        emptyList(),
+                        "[[Property:P1352]]:" + record.ranking + " "  + config.comment,
+                        config.tags)
                 println("create statement successfully")
             }
             Action.UPDATE_STATEMENT_REFERENCE -> {
@@ -430,6 +494,12 @@ class ShangHaiRanking {
         BCVCR("bcvcr"),
     }
 
+    enum class LANG(val lang: String) {
+        ZH("zh"),
+        EN("en"),
+    }
+
+    data class Title2Qid(val title: String, val qid: String)
 }
 
 private fun main() {
