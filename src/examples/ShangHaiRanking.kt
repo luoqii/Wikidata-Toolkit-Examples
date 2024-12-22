@@ -1,5 +1,6 @@
 package examples
 
+import okhttp3.internal.notify
 import org.wikidata.wdtk.datamodel.helpers.Datamodel
 import org.wikidata.wdtk.datamodel.helpers.ItemDocumentBuilder
 import org.wikidata.wdtk.datamodel.helpers.ReferenceBuilder
@@ -18,6 +19,7 @@ import java.math.BigDecimal
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
+import kotlin.time.TimedValue
 
 
 class ShangHaiRanking {
@@ -25,6 +27,7 @@ class ShangHaiRanking {
     private var wbde: WikibaseDataEditor? = null
     private var wbdf: WikibaseDataFetcher? = null
 
+    val DEBUG_VERBOSE = false
     val DEBUG = false
 
     /**
@@ -72,8 +75,23 @@ class ShangHaiRanking {
             Title2Qid("Mayo Medical School", "Q6797536"),
             Title2Qid("The Hebrew University of Jerusalem", "Q174158"),
             Title2Qid("University of Goettingen", "Q152838"),
+            Title2Qid("Pierre and Marie  Curie University - Paris 6", "Q1144549"),
             Title2Qid("Pierre and Marie Curie University - Paris 6", "Q1144549"),
             Title2Qid("Rutgers, The State University of New Jersey - New Brunswick", "Q499451"),
+            Title2Qid("The Imperial College of Science, Technology and Medicine", "Q189022"),
+            Title2Qid("VU University Amsterdam", "Q1065414"),
+            Title2Qid("The Johns Hopkins University", "Q193727"),
+            Title2Qid("University of Michigan - Ann Arbor", "Q230492"),
+            Title2Qid("University of Paris Sud (Paris 11)", "Q1480643"),
+            Title2Qid("University of Heidelberg", "Q151510"),
+            Title2Qid("Arizona State University - Tempe", "Q670897"),
+            Title2Qid("The Imperial College of Science", "Q189022"),
+            Title2Qid("Rutgers", "Q499451"),
+            Title2Qid("Texas A&M University - College Station", "Q49212"),
+            Title2Qid("The University of Sheffield", "Q823917"),
+            Title2Qid("University of Roma - La Sapienza", "Q209344"),
+            Title2Qid("University of Illinois at Chicago", "Q955764"),
+            Title2Qid("North Carolina State University - Raleigh", "Q1132346"),
     )
     val zhErrData: List<Title2Qid> = listOf(
             Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108")
@@ -81,7 +99,20 @@ class ShangHaiRanking {
 
     fun parseDataAndUpload2wikidata() {
         //arwu
-        processDataSet("2016", TYPE.ARWU, LANG.EN)
+        processDataSet("2003", TYPE.ARWU, LANG.EN)
+        processDataSet("2004", TYPE.ARWU, LANG.EN)
+        processDataSet("2005", TYPE.ARWU, LANG.EN)
+        processDataSet("2006", TYPE.ARWU, LANG.EN)
+        processDataSet("2007", TYPE.ARWU, LANG.EN)
+//        processDataSet("2008", TYPE.ARWU, LANG.EN)
+//        processDataSet("2009", TYPE.ARWU, LANG.EN)
+//        processDataSet("2010", TYPE.ARWU, LANG.EN)
+//        processDataSet("2011", TYPE.ARWU, LANG.EN)
+//        processDataSet("2012", TYPE.ARWU, LANG.EN)
+//        processDataSet("2013", TYPE.ARWU, LANG.EN)
+//        processDataSet("2014", TYPE.ARWU, LANG.EN)
+//        processDataSet("2015", TYPE.ARWU, LANG.EN)
+//        processDataSet("2016", TYPE.ARWU, LANG.EN)
 //        processDataSet("2018", TYPE.ARWU, LANG.EN)
 //        processDataSet("2018", TYPE.ARWU, LANG.EN)
 //        processDataSet("2019", TYPE.ARWU, LANG.EN)
@@ -159,18 +190,19 @@ class ShangHaiRanking {
         config.pidRanking = "P1352"
         config.pidDeterminateMethod = "P459"
         config.pidPointTime = "P585"
+        config.pidRetrievedTime = "P813"
         config.qidDeterminateMethod = when (type) {
             TYPE.BCUR -> "Q56274575"
             TYPE.ARWU -> "Q478743"
             TYPE.BCVCR -> "Q131413842"
         }
-        config.comment += when (type) {
-            TYPE.BCUR -> "增加" + config.year + "年 软科中国大学排名數據"
-            TYPE.ARWU -> "增加" + config.year + "年 ShanghaiRanking's Academic Ranking of World Universities"
-            TYPE.BCVCR -> "增加" + config.year + "年 软科中国高职院校排名數據"
-        }
+//        config.comment += when (type) {
+//            TYPE.BCUR -> "增加" + config.year + "年 软科中国大学排名數據"
+//            TYPE.ARWU -> "增加" + config.year + "年 ShanghaiRanking's Academic Ranking of World Universities"
+//            TYPE.BCVCR -> "增加" + config.year + "年 软科中国高职院校排名數據"
+//        }
 
-        config.comment += " top ${records.size}. more see " +
+        config.comment += " more see " +
                 "[[User:Bangbang.S/shanghairanking|here]]"
 
         println("prepare wikidata")
@@ -181,6 +213,8 @@ class ShangHaiRanking {
         config.pidValueRanking = (entityDocument as PropertyDocument).entityId
         entityDocument = wbdf?.getEntityDocument(config.pidPointTime)
         config.pidValuePointTime = (entityDocument as PropertyDocument).entityId
+        entityDocument = wbdf?.getEntityDocument(config.pidRetrievedTime)
+        config.pidValueRetrievedTime = (entityDocument as PropertyDocument).entityId
         entityDocument = wbdf?.getEntityDocument(config.pidDeterminateMethod)
         config.pidValueDeterminateMethod = (entityDocument as PropertyDocument).entityId
         entityDocument = wbdf?.getEntityDocument(config.pidReferenceUrl)
@@ -261,7 +295,7 @@ class ShangHaiRanking {
 
                     for (s in g.statements) {
                         val mainSnak = s.mainSnak
-                        if (DEBUG) {
+                        if (DEBUG_VERBOSE) {
                             println("mainSnak:$mainSnak")
                         }
                         if (mainSnak is ValueSnak) {
@@ -269,14 +303,16 @@ class ShangHaiRanking {
                             if (vs.value is QuantityValue) {
                                 if ((vs.value as QuantityValue).numericValue.toLong() == record.ranking) {
                                     foundMatchedRanking = true
-                                    println("mainSnak:" + vs.propertyId.id + " value:" + vs.value)
+                                    if (DEBUG) {
+                                        println("mainSnak:" + vs.propertyId.id + " value:" + vs.value)
+                                    }
                                 }
                             }
                         }
                         val qualifiers = s.allQualifiers
                         while (qualifiers.hasNext()) {
                             val q = qualifiers.next()
-                            if (DEBUG) {
+                            if (DEBUG_VERBOSE) {
                                 println("qualifier:$q")
                             }
                             if (q is ValueSnak) {
@@ -285,13 +321,17 @@ class ShangHaiRanking {
                                         && vq.value is TimeValue)
                                         && (vq.value as TimeValue).year == config.year.toLong()) {1
                                     foundMatchedPoninttime = true
-                                    println("qualifier:" + vq.propertyId.id + " value:" + (vq.value as TimeValue).year)
+                                    if (DEBUG) {
+                                        println("qualifier:" + vq.propertyId.id + " value:" + (vq.value as TimeValue).year)
+                                    }
                                 }
                                 if (vq.propertyId.id.equals(config.pidDeterminateMethod, ignoreCase = true)
                                         && vq.value is ItemIdValue
                                         && (vq.value as ItemIdValue).id.equals(config.qidDeterminateMethod, ignoreCase = true)) {
                                     foundMatchedDeterminateMethod = true
-                                    println("qualifier:" + vq.propertyId.id + " value:" + vq.value)
+                                    if (DEBUG) {
+                                        println("qualifier:" + vq.propertyId.id + " value:" + vq.value)
+                                    }
                                 }
                             }
                         }
@@ -301,7 +341,7 @@ class ShangHaiRanking {
                                 val pid = group.property.id
                                 if (config.pidReferenceUrl.equals(pid, false)) {
                                     group.snaks.forEach {
-                                        if (DEBUG) {
+                                        if (DEBUG_VERBOSE) {
                                             System.out.println("reference snak:" + it)
                                         }
                                         if (it is ValueSnak) {
@@ -360,9 +400,16 @@ class ShangHaiRanking {
                                 Datamodel.makeStringValue(config.referenceUrl))
                         .build()
                 val noid = ItemIdValue.NULL
+                val c = Calendar.getInstance()
                 val statement = StatementBuilder
                         .forSubjectAndProperty(item!!.entityId, config.pidValueRanking)
                         .withValue(Datamodel.makeQuantityValue(BigDecimal.valueOf(record.ranking)))
+                        .withQualifierValue(config.pidValueRetrievedTime,
+                                Datamodel.makeTimeValue((c.get(Calendar.YEAR)).toLong(),
+                                        (c.get(Calendar.MONTH) + 1).toByte(),
+                                        c.get(Calendar.DAY_OF_MONTH).toByte(),
+                                        TimeValue.CM_GREGORIAN_PRO)
+                                )
                         .withQualifierValue(config.pidValuePointTime,
                                 DataObjectFactoryImpl().getTimeValue(config.year.toLong(),
                                         0,
@@ -374,7 +421,7 @@ class ShangHaiRanking {
                                         0,
                                         0,
                                         0, TimeValue.CM_GREGORIAN_PRO)
-                                )
+                        )
                         .withQualifierValue(config.pidValueDeterminateMethod, Datamodel.makeWikidataItemIdValue(config.qidDeterminateMethod))
                         .withReference(reference)
                         .build()
@@ -385,9 +432,12 @@ class ShangHaiRanking {
                 editor.updateStatements(item!!.entityId,
                         listOf(statement),
                         emptyList(),
-                        "[[Property:P1352]]:" + record.ranking + " "  + config.comment,
+                        "[[Property:P1352]]:" + record.ranking
+                                + " [[Property:${config.pidPointTime}]]:${config.year}"
+                                + " [[Property:${config.pidDeterminateMethod}]]:[[${config.qidDeterminateMethod}]]"
+                                + " " + config.comment,
                         config.tags)
-                println("create statement successfully")
+                println("create statement successfully randking:${record.ranking}  year:${config.year}, ${config.qidDeterminateMethod}")
             }
             Action.UPDATE_STATEMENT_REFERENCE -> {
                 println("TODO UPDATE_STATEMENT_REFERENCE")
@@ -481,6 +531,8 @@ class ShangHaiRanking {
         var qidDeterminateMethodEntity: ItemDocument? = null
         var pidPointTime: String = ""
         var pidValuePointTime: PropertyIdValue? = null
+        var pidRetrievedTime: String = ""
+        var pidValueRetrievedTime: PropertyIdValue? = null
         var pidReferenceUrl: String = "P854"
         var pidValueReferenceUrl: PropertyIdValue? = null
         var referenceUrl: String = ""
