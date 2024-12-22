@@ -68,6 +68,10 @@ class ShangHaiRanking {
             Title2Qid("Pennsylvania State University - University Park", "Q7163241"),
             Title2Qid("The University of Western Australia", "Q1517021"),
             Title2Qid("The Ohio State University - Columbus", "Q309331"),
+            Title2Qid("Georgia Institute of Technology", "Q864855"),
+            Title2Qid("Mayo Medical School", "Q6797536"),
+            Title2Qid("The Hebrew University of Jerusalem", "Q174158"),
+            Title2Qid("University of Goettingen", "Q152838"),
     )
     val zhErrData: List<Title2Qid> = listOf(
             Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108")
@@ -75,7 +79,9 @@ class ShangHaiRanking {
 
     fun parseDataAndUpload2wikidata() {
         //arwu
-        processDataSet("2019", TYPE.ARWU, LANG.EN)
+        processDataSet("2017", TYPE.ARWU, LANG.EN)
+        processDataSet("2018", TYPE.ARWU, LANG.EN)
+//        processDataSet("2019", TYPE.ARWU, LANG.EN)
 //        processDataSet("2020", TYPE.ARWU)
 //        processDataSet("2021", TYPE.ARWU)
 //        processDataSet("2022", TYPE.ARWU)

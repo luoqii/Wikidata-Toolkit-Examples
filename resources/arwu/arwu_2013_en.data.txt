@@ -1,0 +1,490 @@
+# 以#开头的，或者空行都视为注释，下面的空行也是注释
+
+# 这个文件如何生成的
+# 1，https://www.shanghairanking.com/rankings/arwu/2013
+# 2，选中每一页的排名信息，CTRL_C,然后在 CTRL_V到本文件末尾
+
+
+1
+Harvard University
+Harvard University
+1	100.0	100.0
+2
+Stanford University
+Stanford University
+2	72.6	40.0
+3
+University of California, Berkeley
+University of California, Berkeley
+3	71.3	67.8
+4
+Massachusetts Institute of Technology (MIT)
+Massachusetts Institute of Technology (MIT)
+4	71.1	68.0
+5
+University of Cambridge
+University of Cambridge
+1	69.6	79.1
+6
+California Institute of Technology
+California Institute of Technology
+5	62.9	47.8
+7
+Princeton University
+Princeton University
+6	61.9	52.9
+8
+Columbia University
+Columbia University
+7	59.8	66.1
+9
+University of Chicago
+University of Chicago
+8	57.1	60.9
+10
+University of Oxford
+University of Oxford
+2	55.9	51.8
+11
+Yale University
+Yale University
+9	55.4	47.5
+12
+University of California, Los Angeles
+University of California, Los Angeles
+10	52.9	27.3
+13
+Cornell University
+Cornell University
+11	50.0	38.2
+14
+University of California, San Diego
+University of California, San Diego
+12	49.9	20.0
+15
+University of Pennsylvania
+University of Pennsylvania
+13	49.6	33.0
+16
+University of Washington
+University of Washington
+14	48.3	22.0
+17
+The Johns Hopkins University
+The Johns Hopkins University
+15	46.9	39.3
+18
+University of California, San Francisco
+University of California, San Francisco
+16	46.2	0.0
+19
+University of Wisconsin - Madison
+University of Wisconsin - Madison
+17	44.9	32.1
+20
+Swiss Federal Institute of Technology Zurich
+Swiss Federal Institute of Technology Zurich
+1	43.5	30.7
+21
+The University of Tokyo
+The University of Tokyo
+1	43.0	32.1
+21
+University College London
+University College London
+3	43.0	29.3
+23
+University of Michigan - Ann Arbor
+University of Michigan - Ann Arbor
+18	42.6	33.4
+24
+The Imperial College of Science, Technology and Medicine
+The Imperial College of Science, Technology and Medicine
+4	41.6	15.1
+25
+University of Illinois at Urbana-Champaign
+University of Illinois at Urbana-Champaign
+19	41.1	31.2
+26
+Kyoto University
+Kyoto University
+2	40.8	30.7
+27
+New York University
+New York University
+20	40.5	29.3
+28
+University of Toronto
+University of Toronto
+1	40.3	20.7
+29
+University of Minnesota, Twin Cities
+University of Minnesota, Twin Cities
+21	39.7	27.3
+30
+Northwestern University
+Northwestern University
+22	38.9	16.0
+
+31
+Duke University
+Duke University
+23	38.1	16.0
+32
+Washington University in St. Louis
+Washington University in St. Louis
+24	37.5	19.3
+33
+University of Colorado at Boulder
+University of Colorado at Boulder
+25	37.3	13.1
+34
+Rockefeller University
+Rockefeller University
+26	37.1	17.7
+35
+University of California, Santa Barbara
+University of California, Santa Barbara
+27	35.9	15.1
+36
+The University of Texas at Austin
+The University of Texas at Austin
+28	35.4	16.9
+37
+Pierre and Marie  Curie University - Paris 6
+Pierre and Marie Curie University - Paris 6
+1	35.3	35.1
+38
+University of Maryland, College Park
+University of Maryland, College Park
+29	34.7	20.0
+39
+University of Paris Sud (Paris 11)
+University of Paris Sud (Paris 11)
+2	34.5	31.6
+40
+University of British Columbia
+University of British Columbia
+2	34.2	16.0
+41
+The University of Manchester
+The University of Manchester
+5	34.0	19.3
+42
+University of Copenhagen
+University of Copenhagen
+1	33.8	22.7
+43
+University of North Carolina at Chapel Hill
+University of North Carolina at Chapel Hill
+30	33.7	9.3
+44
+Karolinska Institute
+Karolinska Institute
+1	32.7	23.3
+45
+University of California, Irvine
+University of California, Irvine
+31	32.4	0.0
+46
+The University of Texas Southwestern Medical Center at Dallas
+The University of Texas Southwestern Medical Center at Dallas
+32	31.4	19.3
+47
+University of California, Davis
+University of California, Davis
+33-34	31.3	0.0
+47
+University of Southern California
+University of Southern California
+33-34	31.3	0.0
+49
+Vanderbilt University
+Vanderbilt University
+35	31.0	16.0
+50
+Technical University Munich
+Technical University Munich
+1	30.6	36.3
+51
+The University of Edinburgh
+The University of Edinburgh
+6	30.5	21.4
+52
+Carnegie Mellon University
+Carnegie Mellon University
+36	30.4	33.0
+52
+Utrecht University
+Utrecht University
+1	30.4	23.9
+54
+Pennsylvania State University - University Park
+Pennsylvania State University - University Park
+37	30.2	10.7
+54
+University of Heidelberg
+University of Heidelberg
+2	30.2	14.1
+54
+University of Melbourne
+University of Melbourne
+1	30.2	17.7
+57
+Purdue University - West Lafayette
+Purdue University - West Lafayette
+38	30.1	14.1
+58
+McGill University
+McGill University
+3	29.9	31.6
+59
+The Hebrew University of Jerusalem
+The Hebrew University of Jerusalem
+1	29.8	33.4
+60
+University of Zurich
+University of Zurich
+2	29.7	5.3
+
+61
+Rutgers, The State University of New Jersey - New Brunswick
+Rutgers, The State University of New Jersey - New Brunswick
+39-40	29.5	10.7
+61
+University of Munich
+University of Munich
+3	29.5	26.7
+61
+University of Pittsburgh
+University of Pittsburgh
+39-40	29.5	19.3
+64
+University of Bristol
+University of Bristol
+7	29.2	7.6
+65
+The Ohio State University - Columbus
+The Ohio State University - Columbus
+41	29.0	13.1
+66
+The Australian National University
+The Australian National University
+2	28.9	14.1
+67
+Brown University
+Brown University
+42	28.8	15.1
+67
+King's College London
+King's College London
+8	28.8	13.1
+69
+University of Geneva
+University of Geneva
+3	28.7	22.7
+69
+University of Oslo
+University of Oslo
+1	28.7	18.5
+71
+Ecole Normale Superieure - Paris
+Ecole Normale Superieure - Paris
+3	28.5	51.0
+71
+University of Florida
+University of Florida
+43	28.5	17.7
+73
+Uppsala University
+Uppsala University
+2	28.0	18.5
+74
+Leiden University
+Leiden University
+2	27.8	18.5
+75
+Boston University
+Boston University
+44	27.4	12.0
+76
+University of Helsinki
+University of Helsinki
+1	27.2	13.1
+77
+Technion-Israel Institute of Technology
+Technion-Israel Institute of Technology
+2	26.6	20.7
+78
+University of Arizona
+University of Arizona
+45	26.5	15.1
+79
+Arizona State University - Tempe
+Arizona State University - Tempe
+46	26.1	0.0
+79
+Moscow State University
+Moscow State University
+1	26.1	43.1
+81
+Aarhus University
+Aarhus University
+2	26.0	12.0
+82
+Stockholm University
+Stockholm University
+3	25.8	25.1
+83
+University of Basel
+University of Basel
+4	25.6	20.0
+83
+University of Nottingham
+University of Nottingham
+9	25.6	12.0
+85
+Ghent University
+Ghent University
+1	25.5	5.3
+85
+Indiana University Bloomington
+Indiana University Bloomington
+47-48	25.5	10.7
+85
+Osaka University
+Osaka University
+3	25.5	9.3
+85
+The University of Queensland
+The University of Queensland
+3	25.5	13.1
+85
+University of Utah
+University of Utah
+47-48	25.5	0.0
+90
+University of Rochester
+University of Rochester
+49	25.4	25.6
+
+91
+The University of Western Australia
+The University of Western Australia
+4	25.0	14.1
+92
+McMaster University
+McMaster University
+4	24.9	13.1
+92
+Michigan State University
+Michigan State University
+50-51	24.9	9.3
+92
+Rice University
+Rice University
+50-51	24.9	16.9
+92
+University of Groningen
+University of Groningen
+3	24.9	0.0
+92
+Weizmann Institute of Science
+Weizmann Institute of Science
+3	24.9	13.1
+97
+University of Strasbourg
+University of Strasbourg
+4	24.7	26.2
+97
+University of Sydney
+University of Sydney
+5	24.7	15.1
+99
+Case Western Reserve University
+Case Western Reserve University
+52	24.6	31.6
+100
+University of Freiburg
+University of Freiburg
+4	24.3	19.3
+101-150
+Baylor College of Medicine
+Baylor College of Medicine
+53-67		0.0
+101-150
+Catholic University of Leuven
+Catholic University of Leuven
+2-4		0.0
+101-150
+Catholic University of Louvain
+Catholic University of Louvain
+2-4		10.7
+101-150
+Emory University
+Emory University
+53-67		0.0
+101-150
+Georgia Institute of Technology
+Georgia Institute of Technology
+53-67		13.1
+101-150
+Hokkaido University
+Hokkaido University
+4-7		12.0
+101-150
+Joseph Fourier University (Grenoble 1)
+Joseph Fourier University (Grenoble 1)
+5-6		0.0
+101-150
+London School of Economics and Political Science
+London School of Economics and Political Science
+10-14		20.7
+101-150
+Lund University
+Lund University
+4		22.0
+101-150
+Mayo Medical School
+Mayo Medical School
+53-67		0.0
+101-150
+Monash University
+Monash University
+6-7		0.0
+101-150
+Nagoya University
+Nagoya University
+4-7		22.7
+101-150
+National Taiwan University
+National Taiwan University
+1		12.0
+101-150
+National University of Singapore
+National University of Singapore
+1		0.0
+101-150
+Oregon State University
+Oregon State University
+53-67		10.7
+101-150
+Radboud University Nijmegen
+Radboud University Nijmegen
+4-7		16.9
+101-150
+Seoul National University
+Seoul National University
+1		0.0
+101-150
+Swiss Federal Institute of Technology of Lausanne
+Swiss Federal Institute of Technology of Lausanne
+5		0.0
+101-150
+Tel Aviv University
+Tel Aviv University
+4		0.0
+101-150
+Texas A&M University - College Station
+Texas A&M University - College Station
+53-67		0.0
