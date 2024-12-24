@@ -1,6 +1,5 @@
 package examples
 
-import okhttp3.internal.notify
 import org.wikidata.wdtk.datamodel.helpers.Datamodel
 import org.wikidata.wdtk.datamodel.helpers.ItemDocumentBuilder
 import org.wikidata.wdtk.datamodel.helpers.ReferenceBuilder
@@ -19,7 +18,6 @@ import java.math.BigDecimal
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
-import kotlin.time.TimedValue
 
 
 class ShangHaiRanking {
@@ -42,7 +40,7 @@ class ShangHaiRanking {
     val DRY_RUN = false
     var actionCountMap = HashMap<Action, Int>()
 
-    val enErrData: List<Title2Qid> = listOf(
+    val enErrata: List<Title2Qid> = listOf(
             Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108"),
             Title2Qid("Swiss Federal Institute of Technology Zurich", "Q11942"),
             Title2Qid("University of Michigan-Ann Arbor", "Q230492"),
@@ -92,18 +90,22 @@ class ShangHaiRanking {
             Title2Qid("University of Roma - La Sapienza", "Q209344"),
             Title2Qid("University of Illinois at Chicago", "Q955764"),
             Title2Qid("North Carolina State University - Raleigh", "Q1132346"),
+            Title2Qid("PSL University", "Q1163431"),
+            Title2Qid("Université Grenoble Alpes", "Q945876"),
+            Title2Qid("Université Paris Cité", "Q55849612"),
+            Title2Qid("The University of Hong Kong", "Q15568"),
     )
-    val zhErrData: List<Title2Qid> = listOf(
+    val zhErrata: List<Title2Qid> = listOf(
             Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108")
     )
 
     fun parseDataAndUpload2wikidata() {
         //arwu
-        processDataSet("2003", TYPE.ARWU, LANG.EN)
-        processDataSet("2004", TYPE.ARWU, LANG.EN)
-        processDataSet("2005", TYPE.ARWU, LANG.EN)
-        processDataSet("2006", TYPE.ARWU, LANG.EN)
-        processDataSet("2007", TYPE.ARWU, LANG.EN)
+//        processDataSet("2003", TYPE.ARWU, LANG.EN)
+//        processDataSet("2004", TYPE.ARWU, LANG.EN)
+//        processDataSet("2005", TYPE.ARWU, LANG.EN)
+//        processDataSet("2006", TYPE.ARWU, LANG.EN)
+//        processDataSet("2007", TYPE.ARWU, LANG.EN)
 //        processDataSet("2008", TYPE.ARWU, LANG.EN)
 //        processDataSet("2009", TYPE.ARWU, LANG.EN)
 //        processDataSet("2010", TYPE.ARWU, LANG.EN)
@@ -116,6 +118,11 @@ class ShangHaiRanking {
 //        processDataSet("2018", TYPE.ARWU, LANG.EN)
 //        processDataSet("2018", TYPE.ARWU, LANG.EN)
 //        processDataSet("2019", TYPE.ARWU, LANG.EN)
+        processDataSet("2020", TYPE.ARWU, LANG.EN)
+        processDataSet("2021", TYPE.ARWU, LANG.EN)
+        processDataSet("2022", TYPE.ARWU, LANG.EN)
+        processDataSet("2023", TYPE.ARWU, LANG.EN)
+        processDataSet("2024", TYPE.ARWU, LANG.EN)
 //        processDataSet("2020", TYPE.ARWU)
 //        processDataSet("2021", TYPE.ARWU)
 //        processDataSet("2022", TYPE.ARWU)
@@ -262,7 +269,7 @@ class ShangHaiRanking {
         var university = fetcher.getEntityDocumentByTitle(siteKey, record.universityName)
         if (null == university) {
             println("try with errData")
-            val list = if (lang == LANG.EN) {enErrData} else {zhErrData}
+            val list = if (lang == LANG.EN) {enErrata} else {zhErrata}
             list.forEach {
                 if (it.title.contentEquals(record.universityName)) {
                     university = fetcher.getEntityDocument(it.qid)
@@ -394,22 +401,22 @@ class ShangHaiRanking {
             Action.ADD_ITEM -> {
                 println("TODO ADD_ITEM")}
             Action.ADD_STATEMENT -> {
+                val c = Calendar.getInstance()
                 val reference = ReferenceBuilder
                         .newInstance()
                         .withPropertyValue(config.pidValueReferenceUrl,
                                 Datamodel.makeStringValue(config.referenceUrl))
-                        .build()
-                val noid = ItemIdValue.NULL
-                val c = Calendar.getInstance()
-                val statement = StatementBuilder
-                        .forSubjectAndProperty(item!!.entityId, config.pidValueRanking)
-                        .withValue(Datamodel.makeQuantityValue(BigDecimal.valueOf(record.ranking)))
-                        .withQualifierValue(config.pidValueRetrievedTime,
+                        .withPropertyValue(config.pidValueRetrievedTime,
                                 Datamodel.makeTimeValue((c.get(Calendar.YEAR)).toLong(),
                                         (c.get(Calendar.MONTH) + 1).toByte(),
                                         c.get(Calendar.DAY_OF_MONTH).toByte(),
                                         TimeValue.CM_GREGORIAN_PRO)
-                                )
+                        )
+                        .build()
+                val noid = ItemIdValue.NULL
+                val statement = StatementBuilder
+                        .forSubjectAndProperty(item!!.entityId, config.pidValueRanking)
+                        .withValue(Datamodel.makeQuantityValue(BigDecimal.valueOf(record.ranking)))
                         .withQualifierValue(config.pidValuePointTime,
                                 DataObjectFactoryImpl().getTimeValue(config.year.toLong(),
                                         0,
