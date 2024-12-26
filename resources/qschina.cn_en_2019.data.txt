@@ -1,0 +1,1518 @@
+# how to get data
+# 1, go to https://www.qschina.cn/en/university-rankings/world-university-rankings/2019
+# 2, show all in one page
+# 3, copy all
+# 4, paste to this file
+
+1
+Massachusetts Institute of Technology (MIT) United States 5+ QS Stars
+100
+2
+Stanford University United States
+98.6
+3
+Harvard University United States
+98.5
+
+4
+California Institute of Technology (Caltech) United States
+97.2
+5
+University of Oxford United Kingdom
+96.8
+6
+University of Cambridge United Kingdom
+95.6
+7
+ETH Zurich - Swiss Federal Institute of Technology Switzerland
+95.3
+8
+Imperial College London United Kingdom
+93.3
+9
+University of Chicago United States
+93.2
+10
+UCL United Kingdom
+92.9
+11
+National University of Singapore (NUS) Singapore
+92
+
+12
+Nanyang Technological University, Singapore (NTU) Singapore
+91.3
+13
+Princeton University United States
+90.9
+14
+Cornell University United States
+90.5
+15
+Yale University United States
+89.6
+16
+Columbia University United States
+88.5
+17
+Tsinghua University China (Mainland)
+87.2
+18
+The University of Edinburgh United Kingdom
+86.9
+19
+University of Pennsylvania United States
+86.5
+
+20
+University of Michigan-Ann Arbor United States
+86.4
+21
+Johns Hopkins University United States
+85.9
+22
+EPFL Switzerland
+85.8
+23
+The University of Tokyo Japan
+85.3
+24
+The Australian National University Australia
+84.4
+25
+The University of Hong Kong Hong Kong SAR
+84.3
+26
+Duke University United States
+83.9
+27
+University of California, Berkeley (UCB) United States
+83.2
+28
+University of Toronto Canada
+83
+29
+The University of Manchester United Kingdom
+82.9
+30
+Peking University China (Mainland)
+82.6
+31
+King's College London United Kingdom
+82.5
+32
+University of California, Los Angeles (UCLA) United States
+81.9
+33
+McGill University Canada
+81.7
+34
+Northwestern University United States
+81.5
+35
+Kyoto University Japan
+81.2
+36
+Seoul National University South Korea
+80.6
+37
+The Hong Kong University of Science and Technology Hong Kong SAR
+80.5
+38
+The London School of Economics and Political Science (LSE) United Kingdom
+80.2
+39
+The University of Melbourne Australia
+80.1
+40
+KAIST - Korea Advanced Institute of Science & Technology South Korea
+78.7
+41
+University of California, San Diego (UCSD) United States
+78.6
+42
+The University of Sydney Australia
+78.3
+43
+New York University (NYU) United States
+77.7
+44
+Fudan University China (Mainland)
+77.6
+45
+The University of New South Wales (UNSW Sydney) Australia 5+ QS Stars
+77
+46
+Carnegie Mellon University United States
+76.6
+47
+University of British Columbia Canada
+75.8
+48
+The University of Queensland Australia
+75.7
+49
+The Chinese University of Hong Kong (CUHK) Hong Kong SAR
+75.6
+50
+Université PSL France
+75.1
+51
+University of Bristol United Kingdom 5+ QS Stars
+74.9
+52
+Delft University of Technology Netherlands
+73.3
+53
+University of Wisconsin-Madison United States
+73.2
+54
+The University of Warwick United Kingdom
+72.9
+55
+City University of Hong Kong Hong Kong SAR
+72.1
+56
+Brown University United States
+72
+57
+University of Amsterdam Netherlands
+71.1
+58
+Tokyo Institute of Technology (Tokyo Tech) Japan
+71
+=59
+Monash University Australia
+70.4
+=59
+Shanghai Jiao Tong University China (Mainland)
+70.4
+61
+Technical University of Munich Germany
+70
+62
+Ludwig-Maximilians-Universität München Germany
+69.4
+63
+University of Texas at Austin United States
+68.7
+64
+Ruprecht-Karls-Universität Heidelberg Germany
+68
+65
+Ecole Polytechnique France
+67.9
+66
+University of Washington United States
+67.8
+67
+Osaka University Japan
+67.7
+68
+Zhejiang University China (Mainland)
+67.5
+=69
+Georgia Institute of Technology United States
+67.4
+=69
+University of Glasgow United Kingdom 5+ QS Stars
+67.4
+71
+University of Illinois at Urbana-Champaign United States
+67
+72
+National Taiwan University (NTU) Taiwan
+66.3
+73
+Universidad de Buenos Aires (UBA) Argentina
+66.2
+74
+Durham University United Kingdom
+65.7
+=75
+Sorbonne University France
+64.8
+=75
+The University of Sheffield United Kingdom
+64.8
+77
+Tohoku University Japan
+64.3
+78
+University of Zurich Switzerland
+63.6
+=79
+University of Birmingham United Kingdom
+63.5
+=79
+University of Copenhagen Denmark
+63.5
+81
+KU Leuven Belgium
+63.4
+82
+University of Nottingham United Kingdom
+63.1
+=83
+Pohang University of Science And Technology (POSTECH) South Korea
+63
+=83
+University of North Carolina, Chapel Hill United States
+63
+85
+The University of Auckland New Zealand 5+ QS Stars
+62.8
+86
+Korea University South Korea
+62.7
+=87
+Rice University United States
+62.6
+=87
+Universiti Malaya (UM) Malaysia 5 QS Stars
+62.6
+89
+The Ohio State University United States
+62.4
+90
+Lomonosov Moscow State University Russia
+62.3
+91
+The University of Western Australia Australia
+62.2
+92
+Lund University Sweden
+62.1
+=93
+Boston University United States
+62
+=93
+University of Leeds United Kingdom
+62
+95
+Pennsylvania State University United States
+61.9
+96
+University of Southampton United Kingdom
+61.6
+97
+University of St Andrews United Kingdom
+61.4
+98
+University of Science and Technology of China China (Mainland)
+60.8
+99
+Eindhoven University of Technology Netherlands
+59.8
+=100
+Purdue University United States
+59.5
+=100
+Sungkyunkwan University(SKKU) South Korea
+59.5
+=100
+University of California, Davis United States
+59.5
+=100
+Washington University in St. Louis United States
+59.5
+=104
+KTH Royal Institute of Technology Sweden
+59.3
+=104
+Trinity College Dublin, The University of Dublin Ireland
+59.3
+106
+The Hong Kong Polytechnic University Hong Kong SAR
+59.1
+107
+Yonsei University South Korea
+58.9
+108
+University of Geneva Switzerland
+58.4
+109
+University of Alberta Canada
+58.1
+110
+University of Helsinki Finland
+57.9
+111
+Nagoya University Japan
+57.3
+112
+Technical University of Denmark Denmark
+57.1
+113
+Universidad Nacional Autónoma de México (UNAM) Mexico
+56.8
+114
+The University of Adelaide Australia
+56.6
+115
+University of Southern California United States
+56.2
+116
+KIT, Karlsruhe Institute of Technology Germany
+55.9
+117
+Uppsala University Sweden
+55.8
+118
+Universidade de São Paulo Brazil
+55.5
+119
+Queen Mary University of London United Kingdom
+55.4
+120
+University of Groningen Netherlands
+55.2
+121
+Humboldt-Universität zu Berlin Germany
+55.1
+=122
+Leiden University Netherlands
+55
+=122
+Nanjing University China (Mainland)
+55
+124
+Utrecht University Netherlands
+54.5
+125
+Wageningen University & Research Netherlands
+54.4
+=126
+Kyushu University Japan
+54.1
+=126
+University of Maryland, College Park United States
+54.1
+=128
+Chalmers University of Technology Sweden
+53.6
+=128
+Hokkaido University Japan
+53.6
+130
+Freie Universitaet Berlin Germany
+53.4
+131
+Lancaster University United Kingdom
+53
+=132
+Pontificia Universidad Católica de Chile (UC) Chile
+52.9
+=132
+University of California, Santa Barbara (UCSB) United States
+52.9
+134
+University of York United Kingdom
+52.4
+135
+University of Oslo Norway
+51.9
+136
+University of Pittsburgh United States
+51.8
+137
+CentraleSupélec France
+51.5
+138
+Ghent University Belgium
+51.3
+139
+University of Bern Switzerland
+51.1
+140
+Aalto University Finland
+50.8
+=141
+Aarhus University Denmark
+50.7
+=141
+Michigan State University United States
+50.7
+=141
+Newcastle University United Kingdom 5+ QS Stars
+50.7
+144
+RWTH Aachen University Germany
+50.4
+145
+Cardiff University United Kingdom
+50.3
+146
+McMaster University Canada
+50.1
+147
+Technische Universität Berlin (TU Berlin) Germany
+49.9
+148
+Emory University United States
+49.6
+=149
+Université de Montréal Canada
+49.5
+=149
+University of Lausanne Switzerland
+49.5
+=151
+Hanyang University South Korea
+49.4
+153
+École Normale Supérieure de Lyon France
+49.2
+=154
+The Hebrew University of Jerusalem Israel
+49.1
+=154
+The University of Exeter United Kingdom 5 QS Stars
+49.1
+=156
+Politecnico di Milano Italy
+48.7
+=156
+University of Minnesota Twin Cities United States
+48.7
+158
+University of Bath United Kingdom
+48.6
+159
+Universidad Autónoma de Madrid Spain
+48.5
+=160
+University of Basel Switzerland
+48.4
+=160
+University of Technology Sydney Australia 5 QS Stars
+48.4
+162
+Indian Institute of Technology Bombay (IITB) India
+48.2
+=163
+National Tsing Hua University Taiwan
+48
+=163
+University of Waterloo Canada
+48
+164
+University of Liverpool United Kingdom
+47.9
+165
+Université catholique de Louvain (UCLouvain) Belgium
+47.9
+166
+Universitat de Barcelona Spain
+47.8
+167
+Sant'Anna - Scuola Universitaria Superiore Pisa Italy
+47.7
+168
+Eberhard Karls Universität Tübingen Germany
+47.6
+169
+University of California, Irvine United States
+47.5
+170
+Indian Institute of Science India
+47.1
+171
+University of Bergen Norway
+46.8
+=172
+Indian Institute of Technology Delhi (IITD) India
+46.6
+=172
+University of Aberdeen United Kingdom
+46.6
+=172
+University of Twente Netherlands
+46.6
+=175
+Scuola Normale Superiore Italy
+46.4
+=175
+University of Vienna Austria
+46.4
+=175
+University of Otago New Zealand 5+ QS Stars
+46.4
+178
+Tecnológico de Monterrey Mexico
+46.2
+179
+Erasmus University Rotterdam Netherlands
+46.1
+=180
+Queen's University Belfast United Kingdom
+45.9
+=180
+Alma Mater Studiorum - University of Bologna Italy
+45.9
+=180
+University of Florida United States
+45.9
+183
+Dartmouth College United States
+45.8
+=184
+Universiti Kebangsaan Malaysia (UKM) Malaysia 5 QS Stars
+45.5
+=184
+University of Rochester United States
+45.5
+=186
+Case Western Reserve University United States
+45.4
+=186
+Albert-Ludwigs-Universitaet Freiburg Germany
+45.4
+188
+Vrije Universiteit Brussel (VUB) Belgium
+45.2
+189
+King Fahd University of Petroleum & Minerals Saudi Arabia
+45.1
+190
+University of Colorado Boulder United States
+45
+191
+Technische Universität Dresden Germany
+44.9
+192
+University of Virginia United States
+44.8
+=193
+Universitat Autònoma de Barcelona Spain
+44.7
+=193
+University College Dublin Ireland
+44.7
+=195
+University of Reading United Kingdom
+44.4
+=195
+Vanderbilt University United States
+44.4
+197
+University of Göttingen Germany
+44.3
+198
+Keio University Japan
+44.1
+199
+Vienna University of Technology Austria
+44
+=200
+Stockholm University Sweden
+43.9
+=200
+UCT Graduate School of Business South Africa
+43.9
+202
+Universiti Putra Malaysia (UPM) Malaysia 5 QS Stars
+43.8
+203
+Texas A&M University United States
+43.5
+=204
+Radboud University Netherlands
+43.3
+=204
+Universidade Estadual de Campinas (Unicamp) Brazil
+43.3
+206
+Complutense University of Madrid Spain
+43.2
+207
+Universiti Sains Malaysia (USM) Malaysia
+43
+=208
+National Chiao Tung University Taiwan
+42.6
+=208
+Universidad de Chile Chile
+42.6
+=208
+Waseda University Japan
+42.6
+211
+Maastricht University Netherlands
+42.5
+=212
+Arizona State University United States
+42.3
+=212
+University of Notre Dame United States
+42.3
+=214
+University of Illinois at Chicago (UIC) United States
+42
+=214
+The University of Newcastle, Australia (UON) Australia
+42
+=214
+Western University Canada 5 QS Stars
+42
+217
+Sapienza University of Rome Italy
+41.8
+=218
+Loughborough University United Kingdom 5+ QS Stars
+41.4
+=218
+University of Wollongong Australia 5+ QS Stars
+41.4
+220
+Al-Farabi Kazakh National University Kazakhstan
+41.3
+=221
+Sciences Po France
+41
+=221
+Victoria University of Wellington New Zealand 5+ QS Stars
+41
+=223
+Universität Hamburg Germany
+40.9
+=223
+University of Antwerp Belgium
+40.9
+=223
+University of Leicester United Kingdom
+40.9
+226
+Georgetown University United States
+40.8
+227
+University of Sussex United Kingdom
+40.7
+228
+Universiti Teknologi Malaysia Malaysia 5 QS Stars
+40.5
+229
+University of Calgary Canada
+40.4
+230
+Tel Aviv University Israel
+40.3
+=231
+King Abdulaziz University (KAU) Saudi Arabia
+40
+=231
+University of Canterbury New Zealand 5 QS Stars
+40
+=231
+Vrije Universiteit Amsterdam Netherlands
+40
+234
+National Cheng Kung University (NCKU) Taiwan
+39.4
+235
+Saint Petersburg State University Russia
+39.2
+236
+Royal Holloway University of London United Kingdom
+39.1
+=237
+American University of Beirut (AUB) Lebanon
+39
+=237
+Tufts University United States
+39
+=239
+Queen's University at Kingston Canada
+38.9
+=239
+Universite libre de Bruxelles Belgium
+38.9
+=239
+Université Paris-Saclay France
+38.9
+=242
+University of Navarra Spain
+38.8
+=242
+University of Miami United States
+38.8
+=244
+Novosibirsk State University Russia
+38.7
+=244
+Queensland University of Technology (QUT) Australia
+38.7
+246
+The University of Arizona United States
+38.5
+247
+Technion - Israel Institute of Technology Israel
+38.4
+248
+University of Surrey United Kingdom 5 QS Stars
+38.3
+249
+Università di Padova Italy
+38.2
+=250
+Curtin University Australia 5 QS Stars
+38
+=250
+Macquarie University Australia
+38
+=250
+RMIT University Australia 5 QS Stars
+38
+=253
+Technical University of Darmstadt Germany
+37.9
+=253
+Universidad Carlos III de Madrid (UC3M) Spain
+37.9
+255
+Rheinische Friedrich-Wilhelms-Universität Bonn Germany
+37.7
+256
+King Saud University Saudi Arabia 5 QS Stars
+37.6
+=257
+National Taiwan University of Science and Technology (Taiwan Tech) Taiwan
+37.5
+=257
+Wuhan University China (Mainland)
+37.5
+259
+University of Massachusetts Amherst United States
+37.3
+=260
+National University of Ireland Galway Ireland
+37.1
+=260
+Universität Stuttgart Germany
+37.1
+=260
+University of Tsukuba Japan
+37.1
+263
+Ecole des Ponts ParisTech France
+37
+=264
+Indian Institute of Technology Madras (IITM) India
+36.7
+=264
+Kyung Hee University South Korea
+36.7
+=264
+Simon Fraser University Canada
+36.7
+=264
+University of South Australia Australia 5 QS Stars
+36.7
+268
+University of Strathclyde United Kingdom 5 QS Stars
+36.6
+=269
+University of East Anglia (UEA) United Kingdom
+36.4
+=269
+University of Gothenburg Sweden
+36.4
+271
+Chulalongkorn University Thailand
+36.3
+=272
+Universidad de los Andes Colombia 4 QS Stars
+36.1
+=272
+University of Dundee United Kingdom
+36.1
+274
+University of Waikato New Zealand
+36
+=275
+Universidad Nacional de Colombia Colombia
+35.9
+=275
+Universitat Politècnica de Catalunya · BarcelonaTech (UPC) Spain
+35.9
+=277
+Hong Kong Baptist University Hong Kong SAR
+35.8
+=277
+Tomsk State University Russia
+35.8
+=279
+Dalhousie University Canada 5 QS Stars
+35.7
+=279
+North Carolina State University United States
+35.7
+=279
+Goethe-University Frankfurt am Main Germany
+35.7
+=279
+Universität Innsbruck Austria
+35.7
+=283
+Indian Institute of Technology Kanpur (IITK) India
+35.6
+=283
+Rutgers University–New Brunswick United States
+35.6
+=285
+Harbin Institute of Technology China (Mainland)
+35.3
+=285
+University of Turku Finland
+35.3
+287
+University of Tasmania Australia
+35.2
+288
+SOAS University of London United Kingdom
+35.1
+=289
+Université Grenoble Alpes France
+35
+=289
+University of Ottawa Canada
+35
+291
+Tongji University China (Mainland)
+34.9
+=292
+Beijing Normal University China (Mainland)
+34.8
+=292
+National Yang Ming University Taiwan
+34.8
+=292
+Universitas Indonesia Indonesia
+34.8
+=295
+Indian Institute of Technology Kharagpur (IIT-KGP) India
+34.7
+=295
+Sun Yat-sen University China (Mainland)
+34.7
+=295
+Université Diderot Paris 7 France
+34.7
+298
+Universitat Pompeu Fabra Spain
+34.6
+=299
+Bauman Moscow State Technical University Russia
+34.5
+=299
+Friedrich-Alexander-Universität Erlangen-Nürnberg Germany
+34.5
+=299
+Université Paris 1 Panthéon-Sorbonne France
+34.5
+=302
+Heriot-Watt University United Kingdom
+34.4
+=302
+Linköping University Sweden
+34.4
+=302
+University of Hawaiʻi at Mānoa United States
+34.4
+305
+ENS Paris-Saclay France
+34.3
+=306
+Birkbeck, University of London United Kingdom
+34.2
+=306
+University of Cologne Germany
+34.2
+308
+National Taiwan Normal University Taiwan
+34.1
+309
+Deakin University Australia 5 QS Stars
+34
+=310
+Universitat Politècnica de València Spain
+33.7
+=310
+Yeshiva University United States
+33.7
+312
+Moscow Institute of Physics and Technology (MIPT / Moscow Phystech) Russia
+33.6
+=313
+University at Buffalo SUNY United States
+33.4
+=313
+Xi’an Jiaotong University China (Mainland)
+33.4
+=315
+Gwangju Institute of Science and Technology (GIST) South Korea
+33.3
+=315
+Khalifa University of Science and Technology United Arab Emirates
+33.3
+=317
+Charles University Czech Republic
+33.2
+=317
+Lincoln University New Zealand
+33.2
+=319
+Ewha Womans University South Korea
+33.1
+=319
+Tilburg University Netherlands
+33.1
+=321
+Hiroshima University Japan
+32.8
+=321
+University of Tartu Estonia
+32.8
+=323
+Indiana University Bloomington United States
+32.7
+=323
+Universiti Brunei Darussalam (UBD) Brunei
+32.7
+325
+University of Milan Italy
+32.5
+=326
+Northeastern University United States
+32.3
+=326
+Universität Jena Germany
+32.3
+328
+University of Porto Portugal
+32.2
+=329
+Griffith University Australia
+32.1
+=329
+National Research Nuclear University MEPhI (Moscow Engineering Physics Institute) Russia
+32.1
+=329
+Westfälische Wilhelms-Universität Münster Germany
+32.1
+=332
+Brunel University London United Kingdom
+32
+=332
+Massey University New Zealand 5+ QS Stars
+32
+=332
+Qatar University Qatar 4 QS Stars
+32
+=332
+University Ulm Germany
+32
+=336
+University of California, Santa Cruz United States
+31.9
+=336
+University of Jyväskylä Finland
+31.9
+=338
+Nankai University China (Mainland)
+31.7
+=338
+Umea University Sweden
+31.7
+=338
+Universität Mannheim Germany
+31.7
+=338
+University College Cork Ireland
+31.7
+=338
+Virginia Polytechnic Institute and State University United States
+31.7
+=343
+Aalborg University Denmark 5 QS Stars
+31.6
+=343
+HSE University (National Research University Higher School of Economics) Russia
+31.6
+=345
+George Washington University United States
+31.5
+=345
+Rensselaer Polytechnic Institute United States
+31.5
+=345
+University of Utah United States
+31.5
+348
+Université de Strasbourg France
+31.3
+349
+Stony Brook University, State University of New York United States
+31.2
+350
+United Arab Emirates University United Arab Emirates 5 QS Stars
+31.1
+351
+City, University of London United Kingdom
+31
+=352
+Kobe University Japan
+30.9
+=352
+Tokyo Medical and Dental University (TMDU) Japan
+30.9
+354
+Belarusian State University Belarus
+30.8
+=355
+Moscow State Institute of International Relations (MGIMO University) Russia 5 QS Stars
+30.7
+=355
+University of Essex United Kingdom
+30.7
+=355
+University of Kent United Kingdom
+30.7
+=355
+University of Lisbon Portugal
+30.7
+=359
+Bandung Institute of Technology (ITB) Indonesia
+30.4
+=359
+University of Victoria (UVic) Canada
+30.4
+361
+Universidade Federal do Rio de Janeiro Brazil
+30.3
+362
+Taipei Medical University (TMU) Taiwan
+30.2
+=363
+Norwegian University of Science And Technology Norway
+30.1
+=363
+Oxford Brookes University United Kingdom
+30.1
+=363
+Graz University of Technology Austria
+30.1
+366
+Tampere University of Technology Finland
+30
+=367
+Universidad Austral Argentina
+29.9
+=367
+University of Kansas United States
+29.9
+=369
+James Cook University Australia
+29.7
+=369
+Pontificia Universidad Católica Argentina Argentina
+29.7
+=369
+University of Tromsø The Arctic University of Norway Norway
+29.7
+372
+Ruhr-Universität Bochum Germany
+29.6
+=373
+National Research Tomsk Polytechnic University Russia
+29.4
+=373
+University of Connecticut United States
+29.4
+375
+University of St.Gallen (HSG) Switzerland
+29.3
+=376
+American University of Sharjah United Arab Emirates
+29.2
+=376
+Boston College United States
+29.2
+=376
+University of Oulu Finland
+29.2
+=376
+University of Southern Denmark (SDU) Denmark
+29.2
+380
+Mahidol University Thailand
+29.1
+=381
+Aston University United Kingdom
+29
+=381
+Indian Institute of Technology Roorkee (IITR) India
+29
+=381
+University of Witwatersrand South Africa
+29
+=384
+Universidad de Belgrano Argentina
+28.8
+=384
+University of California, Riverside United States
+28.8
+=384
+University of the Philippines Philippines
+28.8
+=387
+HUFS - Hankuk (Korea) University of Foreign Studies South Korea
+28.7
+=387
+Politecnico di Torino Italy
+28.7
+=387
+Swinburne University of Technology Australia
+28.7
+=387
+Wake Forest University United States
+28.7
+=391
+Gadjah Mada University Indonesia
+28.6
+=391
+Université de Liège Belgium
+28.6
+=391
+Washington State University United States
+28.6
+=394
+L.N. Gumilyov Eurasian National University (ENU) Kazakhstan
+28.5
+=394
+University of Warsaw Poland
+28.5
+396
+Goldsmiths, University of London United Kingdom 5 QS Stars
+28.3
+=397
+Chung-Ang University (CAU) South Korea
+28.2
+=397
+La Trobe University Australia 5 QS Stars
+28.2
+=397
+Pakistan Institute of Engineering and Applied Sciences (PIEAS) Pakistan
+28.2
+=397
+Universität Konstanz Germany
+28.2
+=397
+University of Colorado, Denver United States
+28.2
+=402
+Université Laval Canada
+28.1
+=402
+National Sun Yat-sen University Taiwan
+28.1
+404
+Peter the Great St. Petersburg Polytechnic University Russia
+28
+=405
+Stellenbosch University South Africa
+27.9
+=405
+Universidade Nova de Lisboa Portugal
+27.9
+=407
+Ben-Gurion University of The Negev Israel
+27.7
+=407
+Johannes Gutenberg Universität Mainz Germany
+27.7
+=407
+Universidad Externado de Colombia Colombia 4 QS Stars
+27.7
+=407
+University of Coimbra Portugal 5 QS Stars
+27.7
+411
+Jagiellonian University Poland
+27.6
+=412
+Tulane University United States
+27.5
+=412
+Universidad de Zaragoza Spain
+27.5
+=412
+Ural Federal University - UrFU Russia
+27.5
+=415
+Huazhong University of Science and Technology China (Mainland)
+27.4
+=415
+National Central University Taiwan
+27.4
+=417
+National University of Sciences And Technology (NUST) Islamabad Pakistan
+27.3
+=417
+University of Stirling United Kingdom 5 QS Stars
+27.3
+419
+The University of Tennessee, Knoxville United States
+27.2
+=420
+The American University in Cairo Egypt
+27.1
+=420
+Universidad de Palermo (UP) Argentina
+27.1
+=422
+Dublin City University Ireland
+27
+=422
+Shanghai University China (Mainland)
+27
+=422
+University of Pisa Italy
+27
+=422
+Université de Montpellier France
+27
+=426
+Illinois Institute of Technology United States
+26.9
+=426
+University of Trento Italy
+26.9
+=426
+University of Texas Dallas United States
+26.9
+=429
+Brandeis University United States
+26.8
+=429
+Chang Gung University Taiwan
+26.8
+431
+The University of Georgia United States
+26.7
+=432
+Aberystwyth University United Kingdom
+26.5
+=432
+Dongguk University South Korea
+26.5
+=432
+Sharif University of Technology Iran, Islamic Republic of
+26.5
+=435
+Bangor University United Kingdom
+26.4
+=435
+Sogang University South Korea
+26.4
+=435
+Swansea University United Kingdom
+26.4
+=435
+University of Iowa United States
+26.4
+=439
+Kazan (Volga region) Federal University Russia 4 QS Stars
+26.2
+=439
+University of Delaware United States
+26.2
+=439
+Wayne State University United States
+26.2
+442
+Universiti Teknologi Brunei Brunei 5 QS Stars
+26.1
+=443
+Bond University Australia 5 QS Stars
+26
+=443
+Tianjin University China (Mainland)
+26
+=443
+University of Macau Macau SAR
+26
+=446
+National Technical University of Athens Greece
+25.9
+=446
+RUDN University Russia 4 QS Stars
+25.9
+=448
+King Khalid University Saudi Arabia 3 QS Stars
+25.8
+=448
+Koç University Turkey
+25.8
+=450
+Colorado State University United States
+25.7
+=450
+Oregon State University United States
+25.7
+=450
+Sultan Qaboos University Oman
+25.7
+=453
+Christian-Albrechts-University zu Kiel Germany
+25.6
+=453
+Aix-Marseille University France
+25.6
+=453
+University of Maryland, Baltimore County United States
+25.6
+=456
+Bilkent University Turkey
+25.5
+=456
+Hitotsubashi University Japan
+25.5
+=456
+Johannes Kepler University Linz Austria
+25.5
+=456
+The Catholic University of Korea South Korea
+25.5
+460
+Yokohama City University Japan
+25.4
+=461
+Clark University United States
+25.3
+=461
+Universität des Saarlandes Germany
+25.3
+=461
+University of Saskatchewan Canada
+25.3
+=464
+Auckland University of Technology (AUT) New Zealand 5 QS Stars
+25.2
+=464
+Beijing Institute of Technology China (Mainland)
+25.2
+=464
+Chiba University Japan
+25.2
+=464
+Concordia University Canada
+25.2
+=464
+Satbayev University Kazakhstan
+25.2
+=464
+Universidade Federal de São Paulo Brazil
+25.2
+=470
+Universidad Politécnica de Madrid (UPM) Spain
+25.1
+=470
+University of Szeged Hungary
+25.1
+=472
+Florida State University United States
+25
+=472
+Indian Institute of Technology Guwahati (IITG) India
+25
+=472
+University of Naples - Federico II Italy
+25
+475
+Jilin University China (Mainland)
+24.8
+=476
+The National University of Science and Technology MISIS Russia
+24.7
+=476
+Xiamen University China (Mainland)
+24.7
+=478
+Flinders University Australia
+24.6
+=478
+Institut National des Sciences Appliquées de Lyon (INSA) France
+24.6
+480
+Auezov South Kazakhstan State University (SKSU) Kazakhstan
+24.5
+=481
+Abai Kazakh National Pedagogical University Kazakhstan
+24.4
+=481
+UCSI University Malaysia
+24.4
+=481
+Universidad de Alcalá Spain
+24.4
+=481
+University of Eastern Finland Finland
+24.4
+=481
+V. N. Karazin Kharkiv National University Ukraine
+24.4
+=481
+York University Canada
+24.4
+487
+University of Delhi India
+24.2
+488
+Vilnius University Lithuania
+24.1
+=489
+Iowa State University United States
+24
+=489
+University of Bordeaux France
+24
+=491
+Beihang University (former BUAA) China (Mainland)
+23.9
+=491
+UNESP Brazil
+23.9
+=491
+Università Cattolica del Sacro Cuore Italy
+23.9
+494
+University of New Mexico United States
+23.8
+=495
+University of Granada Spain
+23.7
+=495
+University of Hohenheim Germany
+23.7
+=495
+University of Oklahoma United States
+23.7
+=498
+Amirkabir University of Technology Iran, Islamic Republic of
+23.6
+=498
+Western Sydney University Australia 5 QS Stars
+23.6
+=500
+Singapore Management University Singapore 5 QS Stars
+23.5
+=500
+Technische Universität Braunschweig Germany
+23.5
+=500
+Saint Joseph University of Beirut (USJ) Lebanon
+23.5
+=500
+University of Science and Technology Beijing China (Mainland)
+23.5
