@@ -8,27 +8,29 @@ import java.io.IOException
 
 class QsRanking : UniversityiRanking() {
     fun parseDataAndUpload2wikidata() {
-        processDataSet("2019")
+        processDataSet("2024")
     }
 
     private fun processDataSet(year: String) {
         val config = Config()
         config.year = year
-        val records = parseResource("./resources/" +
+        val records = parseResource("./resources/qs/" +
                 "qschina.cn_en_" + "" +
                 config.year +
                 ".data.txt")
 
-        for (r in records) {
-            println(r)
+        if (DUMP_DATASET_ONLY) {
+            records.forEach {
+                println("$it")
+            }
+            return
         }
 
-        config.referenceUrl = "https://www.shanghairanking.cn/rankings/" +
-                config.year +
-                "/" + year
-        config.qidDeterminateMethod = "Q"
+        config.referenceUrl = "https://www.qschina.cn/en/university-rankings/world-university-rankings/" +
+                config.year
+        config.qidDeterminateMethod = "Q1790510"
         config.comment += " more see " +
-                "[[User:Bangbang.S/shanghairanking|here]]"
+                "[[User:Bangbang.S/ranking/qs|here]]"
 
         processRecords(config, LANG.EN, records)
     }
@@ -61,11 +63,13 @@ class QsRanking : UniversityiRanking() {
                         if (line.isNotEmpty()) {
                             contents.add(line)
                         }
-                        if (contents.size == 3) {
+                        if (contents.size == 2) {
                             rankingStr = contents[0]
                             name = contents[1]
                             if (rankingStr.startsWith("=")) {
                                 rankingStr = rankingStr.substring(1)
+                            } else if (rankingStr.contains("-")) {
+                                break
                             }
                             val record = UniversityRecord()
                             record.ranking = rankingStr.toLong()

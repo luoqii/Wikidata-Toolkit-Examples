@@ -6,68 +6,10 @@ import java.io.FileNotFoundException
 import java.io.FileReader
 import java.io.IOException
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 
 class ShangHaiRanking : UniversityiRanking() {
-
-
     init {
-        enErrata = listOf(
-                Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108"),
-                Title2Qid("Swiss Federal Institute of Technology Zurich", "Q11942"),
-                Title2Qid("University of Michigan-Ann Arbor", "Q230492"),
-                Title2Qid("The University of Tokyo", "Q7842"),
-                Title2Qid("University of Wisconsin - Madison", "Q838330"),
-                Title2Qid("The University of Edinburgh", "Q160302"),
-                Title2Qid("The University of Manchester", "Q230899"),
-                Title2Qid("University of Paris-Sud (Paris 11)", "Q1480643"),
-                Title2Qid("University of Colorado at Boulder", "Q736674"),
-                Title2Qid("University of Illinois at Urbana-Champaign", "Q457281"),
-                Title2Qid("The University of Melbourne", "Q319078"),
-                Title2Qid("University of Minnesota, Twin Cities", "Q238101"),
-                Title2Qid("The University of Texas at Austin", "Q49213"),
-                Title2Qid("The University of Texas Southwestern Medical Center at Dallas", "Q2725999"),
-                Title2Qid("University of Munich", "Q55044"),
-                Title2Qid("The University of Queensland", "Q866012"),
-                Title2Qid("Technical University Munich", "Q157808"),
-                Title2Qid("The University of Texas M. D. Anderson Cancer Center", "Q1525831"),
-                Title2Qid("Purdue University - West Lafayette", "Q217741"),
-                Title2Qid("The Australian National University", "Q127990"),
-                Title2Qid("Swiss Federal Institute of Technology Lausanne", "Q262760"),
-                Title2Qid("Ecole Normale Superieure - Paris", "Q273604"),
-                Title2Qid("Technion-Israel Institute of Technology", "Q333705"),
-                Title2Qid("University of Pittsburgh, Pittsburgh Campus", "Q235034"),
-                Title2Qid("The University of New South Wales", "Q734764"),
-                Title2Qid("Pennsylvania State University - University Park", "Q7163241"),
-                Title2Qid("The University of Western Australia", "Q1517021"),
-                Title2Qid("The Ohio State University - Columbus", "Q309331"),
-                Title2Qid("Georgia Institute of Technology", "Q864855"),
-                Title2Qid("Mayo Medical School", "Q6797536"),
-                Title2Qid("The Hebrew University of Jerusalem", "Q174158"),
-                Title2Qid("University of Goettingen", "Q152838"),
-                Title2Qid("Pierre and Marie  Curie University - Paris 6", "Q1144549"),
-                Title2Qid("Pierre and Marie Curie University - Paris 6", "Q1144549"),
-                Title2Qid("Rutgers, The State University of New Jersey - New Brunswick", "Q499451"),
-                Title2Qid("The Imperial College of Science, Technology and Medicine", "Q189022"),
-                Title2Qid("VU University Amsterdam", "Q1065414"),
-                Title2Qid("The Johns Hopkins University", "Q193727"),
-                Title2Qid("University of Michigan - Ann Arbor", "Q230492"),
-                Title2Qid("University of Paris Sud (Paris 11)", "Q1480643"),
-                Title2Qid("University of Heidelberg", "Q151510"),
-                Title2Qid("Arizona State University - Tempe", "Q670897"),
-                Title2Qid("The Imperial College of Science", "Q189022"),
-                Title2Qid("Rutgers", "Q499451"),
-                Title2Qid("Texas A&M University - College Station", "Q49212"),
-                Title2Qid("The University of Sheffield", "Q823917"),
-                Title2Qid("University of Roma - La Sapienza", "Q209344"),
-                Title2Qid("University of Illinois at Chicago", "Q955764"),
-                Title2Qid("North Carolina State University - Raleigh", "Q1132346"),
-                Title2Qid("PSL University", "Q1163431"),
-                Title2Qid("Université Grenoble Alpes", "Q945876"),
-                Title2Qid("Université Paris Cité", "Q55849612"),
-                Title2Qid("The University of Hong Kong", "Q15568"),
-        )
         zhErrata = listOf(
                 Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108")
         )
@@ -156,7 +98,7 @@ class ShangHaiRanking : UniversityiRanking() {
             }
             last = bcurRecord
         }
-        if (VALID_DATASET_ONLY) {
+        if (DUMP_DATASET_ONLY) {
             records.forEach {
                 println("$it")
             }
