@@ -8,7 +8,9 @@ import java.io.IOException
 
 class QsRanking : UniversityiRanking() {
     fun parseDataAndUpload2wikidata() {
-        processDataSet("2024")
+//        processDataSet("2022")
+        processDataSet("2023")
+//        processDataSet("2024")
     }
 
     private fun processDataSet(year: String) {
