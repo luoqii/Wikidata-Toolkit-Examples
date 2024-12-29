@@ -18,6 +18,8 @@ open class UniversityiRanking {
     val DEBUG = false
     val DRY_RUN = false
 
+    val USE_FIRST_SEARCH_RESULT_WHEN_NOT_FOUND = true
+
     /**
      * 僅僅驗證原始數據格式，測試用
      */
@@ -27,7 +29,7 @@ open class UniversityiRanking {
      * 只處理第一個數據，測試，驗證用
      */
     val PROCESS_FIRST_RECORD_ONLY = false
-
+    val PROCESS_FIRST_RECORD_INDEX = 5
 
     protected var connection: BasicApiConnection? = null
     protected var wbde: WikibaseDataEditor? = null
@@ -93,6 +95,9 @@ open class UniversityiRanking {
                 Title2Qid("Université Grenoble Alpes", "Q945876"),
                 Title2Qid("Université Paris Cité", "Q55849612"),
                 Title2Qid("The University of Hong Kong", "Q15568"),
+                  Title2Qid("The University of Exeter", "Q1414861"),
+                Title2Qid("Trinity College Dublin, The University of Dublin", "Q2496094"),
+                Title2Qid("University of California, San Diego (UCSD)", "Q622664"),
         )
     }
 
@@ -134,6 +139,15 @@ open class UniversityiRanking {
                     println("found it ${it.qid}")
                     return@forEach
                 }
+            }
+        }
+        if (USE_FIRST_SEARCH_RESULT_WHEN_NOT_FOUND && null == university) {
+            val search = fetcher.searchEntities(record.universityName, "en")
+            println("search result size:${search.size}")
+            if (search.size > 0) {
+                println("search result:${search.get(0)}")
+                university = fetcher.getEntityDocument(search.get(0).entityId)
+//                println("search university:${university}")
             }
         }
         var item: ItemDocument? = null
@@ -325,7 +339,7 @@ open class UniversityiRanking {
         }
         actionCountMap.clear()
         if (PROCESS_FIRST_RECORD_ONLY) {
-            process(records[0], config, siteKey, lang)
+            process(records[PROCESS_FIRST_RECORD_INDEX], config, siteKey, lang)
         } else {
             records.forEach {
                 process(it, config, siteKey, lang)
