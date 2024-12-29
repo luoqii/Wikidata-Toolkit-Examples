@@ -115,12 +115,12 @@ open class UniversityiRanking {
         wbde = WikibaseDataEditor(connection, Datamodel.SITE_WIKIDATA)
     }
 
-    fun process(fetcher: WikibaseDataFetcher,
-                editor: WikibaseDataEditor,
-                record: UniversityRecord,
+    fun process(record: UniversityRecord,
                 config: Config,
                 siteKey: String,
                 lang: LANG){
+        val fetcher = wbdf!!
+        val editor = wbde!!
         println("")
         System.out.println("process record:$record")
         var action = Action.NOP
@@ -153,12 +153,12 @@ open class UniversityiRanking {
             var foundMatchReference = false
             for (g in (university as ItemDocument).statementGroups) {
                 if (g.property.id.equals(config.pidRanking, true)) {
-                    foundMatchedRanking = false
-                    foundMatchedPoninttime = false
-                    foundMatchedDeterminateMethod = false
-                    foundMatchReference = false
-
                     for (s in g.statements) {
+                        foundMatchedRanking = false
+                        foundMatchedPoninttime = false
+                        foundMatchedDeterminateMethod = false
+                        foundMatchReference = false
+
                         val mainSnak = s.mainSnak
                         if (DEBUG_VERBOSE) {
                             println("mainSnak:$mainSnak")
@@ -325,10 +325,10 @@ open class UniversityiRanking {
         }
         actionCountMap.clear()
         if (PROCESS_FIRST_RECORD_ONLY) {
-            process(wbdf!!, wbde!!, records[0], config, siteKey, lang)
+            process(records[0], config, siteKey, lang)
         } else {
             records.forEach {
-                process(wbdf!!, wbde!!, it, config, siteKey, lang)
+                process(it, config, siteKey, lang)
             }
         }
         actionCountMap.forEach { t, u -> println("count for $t is $u") }
