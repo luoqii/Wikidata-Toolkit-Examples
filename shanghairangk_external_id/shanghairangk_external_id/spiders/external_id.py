@@ -5,9 +5,12 @@ from scrapy.spiders import CrawlSpider, Rule
 
 class ExternalIdSpider(CrawlSpider):
     name = "external_id"
-    allowed_domains = ["www.shanghairanking.cn",
-                       "www.shanghairanking.com"]
-    start_urls = ["https://www.shanghairanking.com/institution/king-saud-university"]
+    allowed_domains = [
+                       "www.shanghairanking.com"
+                       ]
+    start_urls = [
+        "https://www.shanghairanking.com/institution/king-saud-university"
+                  ]
 
     rules = (Rule(LinkExtractor(
                     allow=r"/institution/"),

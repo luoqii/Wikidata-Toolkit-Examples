@@ -6,14 +6,10 @@ import org.wikidata.wdtk.datamodel.helpers.ReferenceBuilder
 import org.wikidata.wdtk.datamodel.helpers.StatementBuilder
 import org.wikidata.wdtk.datamodel.implementation.DataObjectFactoryImpl
 import org.wikidata.wdtk.datamodel.interfaces.*
-import org.wikidata.wdtk.wikibaseapi.BasicApiConnection
-import org.wikidata.wdtk.wikibaseapi.WikibaseDataEditor
-import org.wikidata.wdtk.wikibaseapi.WikibaseDataFetcher
-import java.io.FileInputStream
 import java.math.BigDecimal
 import java.util.*
 
-open class UniversityiRanking {
+open class UniversityiRanking : BaseRanking() {
     val DEBUG_VERBOSE = false
     val DEBUG = false
     val DRY_RUN = false
@@ -30,10 +26,6 @@ open class UniversityiRanking {
      */
     val PROCESS_FIRST_RECORD_ONLY = false
     val PROCESS_FIRST_RECORD_INDEX = 5
-
-    protected var connection: BasicApiConnection? = null
-    protected var wbde: WikibaseDataEditor? = null
-    protected var wbdf: WikibaseDataFetcher? = null
 
     var actionCountMap = HashMap<Action, Int>()
 
@@ -95,29 +87,11 @@ open class UniversityiRanking {
                 Title2Qid("Université Grenoble Alpes", "Q945876"),
                 Title2Qid("Université Paris Cité", "Q55849612"),
                 Title2Qid("The University of Hong Kong", "Q15568"),
-                  Title2Qid("The University of Exeter", "Q1414861"),
+                Title2Qid("The University of Exeter", "Q1414861"),
                 Title2Qid("Trinity College Dublin, The University of Dublin", "Q2496094"),
                 Title2Qid("University of California, San Diego (UCSD)", "Q622664"),
+                Title2Qid("University at Buffalo SUNY", "Q681025"),
         )
-    }
-
-    fun login() {
-        val p = Properties()
-        p.load(FileInputStream(".local.properties"))
-        val name = p.get("user.name")
-        val password = p.get("user.password")
-        println(name)
-        println(password)
-
-        connection =
-                BasicApiConnection.getWikidataApiConnection()
-        connection?.login(name.toString(), password.toString())
-        println("login success")
-    }
-
-    protected fun initFetcherEditor() {
-        wbdf = WikibaseDataFetcher(connection, Datamodel.SITE_WIKIDATA)
-        wbde = WikibaseDataEditor(connection, Datamodel.SITE_WIKIDATA)
     }
 
     fun process(record: UniversityRecord,
@@ -321,6 +295,8 @@ open class UniversityiRanking {
             Action.UPDATE_STATEMENT_REFERENCE -> {
                 println("TODO UPDATE_STATEMENT_REFERENCE")
             }
+
+            Action.UPDATE_STATEMENT -> TODO()
         }
 
     }

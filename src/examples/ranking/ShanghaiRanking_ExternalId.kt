@@ -20,12 +20,15 @@ class ShanghaiRanking_external_id : BaseRanking() {
             "Q3918",//大学
             "Q62078547",//公立研究型大学
             "Q23002039",//美国公立教育机构
+            "Q3551775",//法国的大学
     )
 
-    var lastIndex = 0
     val excludeNames = mutableListOf<String>(
-            ""
+            "Shenyang City University",
+            "University of Colorado Health Science Center",
+            "Wuhan Huaxia University of Technology",
     )
+    var lastIndex = 240
 
     fun getShanghaiDatas(): Array<UniversityInfo> {
         var type = object : TypeToken<Array<UniversityInfo>>() {}.type
@@ -44,8 +47,6 @@ class ShanghaiRanking_external_id : BaseRanking() {
     fun check_external_id() {
         login()
         initFetcherEditor()
-
-
 
         val shanghaiJsonArray = getShanghaiDatas()
 
@@ -74,6 +75,11 @@ class ShanghaiRanking_external_id : BaseRanking() {
             return
         }
 
+        if (excludeNames.contains(universityInfo.name)) {
+            println("exclude ")
+            return
+        }
+
         try {
             entity = wbdf!!.getEntityDocumentByTitle(siteKey, universityInfo.name)
             //https://www.mediawiki.org/wiki/Help:Extension:WikibaseCirrusSearch
@@ -95,7 +101,7 @@ class ShanghaiRanking_external_id : BaseRanking() {
             if (null == entity || !(entity is ItemDocument)) {
                 println("can not found for $universityInfo")
 
-                exit(0)
+//                exit(0)
             } else {
                 println("found ")
                 var action = Action.NOP
@@ -131,6 +137,7 @@ class ShanghaiRanking_external_id : BaseRanking() {
                 }
 
                 println("action:${action}")
+                println("item:${doc.entityId}")
                 when (action) {
                     Action.NOP -> {
 
@@ -145,8 +152,8 @@ class ShanghaiRanking_external_id : BaseRanking() {
                         wbde!!.updateStatements(doc.entityId,
                                 listOf(statement),
                                 emptyList(),
-                                "[[Property:P1352]]:" + idFromShangHaiRanking
-                                        + " add id, more see [[User:Bangbang.S/ranking/shanghairanking_external_id|here]]",
+                                "[[Property:P5242]]:" + idFromShangHaiRanking
+                                        + ". add id, more see [[User:Bangbang.S/ranking/shanghairanking_external_id|here]]",
                                 mutableListOf())
                     }
                     Action.UPDATE_STATEMENT -> {
@@ -155,11 +162,13 @@ class ShanghaiRanking_external_id : BaseRanking() {
                                 .build()
 
                         wbde!!.updateStatements(doc.entityId,
+                                listOf(statement),
                                 listOf(externalStatement),
-                                listOf(),
-                                "[[Property:P1352]]:" + idFromShangHaiRanking
-                                        + " change id, more see [[User:Bangbang.S/ranking/shanghairanking_external_id|here]]",
+                                "[[Property:P5242]]:" + idFromShangHaiRanking
+                                        + ". change id, more see [[User:Bangbang.S/ranking/shanghairanking_external_id|here]]",
                                 mutableListOf())
+
+//                        exit(0)
                     }
                     Action.UPDATE_STATEMENT_REFERENCE -> TODO()
                 }
