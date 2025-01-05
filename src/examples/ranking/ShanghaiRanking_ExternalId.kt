@@ -9,7 +9,9 @@ import org.wikidata.wdtk.datamodel.interfaces.ItemDocument
 import org.wikidata.wdtk.datamodel.interfaces.ItemIdValue
 import org.wikidata.wdtk.datamodel.interfaces.StringValue
 import java.io.FileReader
-import java.lang.System.exit
+import java.io.IOException
+
+private const val comment = "more see [[User:Bangbang.S/ranking/shanghairanking_external_id|here]]"
 
 class ShanghaiRanking_external_id : BaseRanking() {
     val externalPid = "P5242"
@@ -21,6 +23,7 @@ class ShanghaiRanking_external_id : BaseRanking() {
             "Q62078547",//公立研究型大学
             "Q23002039",//美国公立教育机构
             "Q3551775",//法国的大学
+            "Q902104",//私立大学
     )
 
     val excludeNames = mutableListOf<String>(
@@ -28,38 +31,57 @@ class ShanghaiRanking_external_id : BaseRanking() {
             "University of Colorado Health Science Center",
             "Wuhan Huaxia University of Technology",
     )
-    var lastIndex = 240
+    var lastIndex = 2000
 
-    fun getShanghaiDatas(): Array<UniversityInfo> {
+    fun getShanghaiDatas(): List<UniversityInfo> {
         var type = object : TypeToken<Array<UniversityInfo>>() {}.type
         var jsonPath = "./shanghairangk_external_id/external_id.json"
         val shanghaiJsonArray = Gson().fromJson<Array<UniversityInfo>>(FileReader(jsonPath), type)
-        return shanghaiJsonArray
+        return shanghaiJsonArray.toList()
     }
 
-    fun getWikiDatas(): Array<WikiItem> {
+    fun getShanghaiCnDatas(): List<UniversityInfo> {
+        var type = object : TypeToken<Array<UniversityCnInfo>>() {}.type
+        var jsonPath = "./shanghai_institution/id.json"
+        val shanghaiJsonArray = Gson().fromJson<Array<UniversityCnInfo>>(FileReader(jsonPath), type)
+
+        val list = mutableListOf<UniversityInfo>()
+        shanghaiJsonArray.forEach {
+            list.add(UniversityInfo(it.name_cn, it.location, it.url))
+        }
+
+        return list
+    }
+
+    fun getWikiDatas(): List<WikiItem> {
         var type = object : TypeToken<Array<WikiItem>>() {}.type
         var jsonPath = "./resources/P5242.json"
         val wikidataJsonArray = Gson().fromJson<Array<WikiItem>>(FileReader(jsonPath), type)
-        return wikidataJsonArray
+        return wikidataJsonArray.toList()
     }
 
     fun check_external_id() {
         login()
         initFetcherEditor()
 
-        val shanghaiJsonArray = getShanghaiDatas()
+        var shanghaiJsonArray = getShanghaiDatas()
 
-        val siteKey = "enwiki"
+        var siteKey = "enwiki"
         var notFoundCount = 0
+
+        shanghaiJsonArray = getShanghaiCnDatas()
+        siteKey = "zhwiki"
 
         shanghaiJsonArray.forEachIndexed { index, universityInfo ->
             if (index < lastIndex) {
                 return@forEachIndexed
             }
+
             println()
             println("index:$index $universityInfo")
+
             process(siteKey, universityInfo, notFoundCount)
+
             if (index % 50 == 0) {
                 println("notFound/total:$notFoundCount/${index + 1}")
             }
@@ -88,13 +110,16 @@ class ShanghaiRanking_external_id : BaseRanking() {
             var searchResult = wbdf!!.searchEntities(search, 5)
             if (null == entity && searchResult != null && searchResult.size > 0) {
                 println("getEntityDocumentByTitle return null search it")
-                searchResult.forEach {
-                    val search = wbdf!!.getEntityDocument(it.entityId)
-                    if (isEducationItem(search)) {
-//                        println("label $search.")
-                        entity = search
 
-                        return@forEach
+                run  loop@{
+                    searchResult.forEach {
+                        val search = wbdf!!.getEntityDocument(it.entityId)
+                        if (isEducationItem(search)) {
+//                        println("label $search.")
+                            entity = search
+
+                            return@loop
+                        }
                     }
                 }
             }
@@ -153,7 +178,7 @@ class ShanghaiRanking_external_id : BaseRanking() {
                                 listOf(statement),
                                 emptyList(),
                                 "[[Property:P5242]]:" + idFromShangHaiRanking
-                                        + ". add id, more see [[User:Bangbang.S/ranking/shanghairanking_external_id|here]]",
+                                        + ". add id, $comment",
                                 mutableListOf())
                     }
                     Action.UPDATE_STATEMENT -> {
@@ -165,7 +190,7 @@ class ShanghaiRanking_external_id : BaseRanking() {
                                 listOf(statement),
                                 listOf(externalStatement),
                                 "[[Property:P5242]]:" + idFromShangHaiRanking
-                                        + ". change id, more see [[User:Bangbang.S/ranking/shanghairanking_external_id|here]]",
+                                        + ". change id, $comment",
                                 mutableListOf())
 
 //                        exit(0)
@@ -175,6 +200,9 @@ class ShanghaiRanking_external_id : BaseRanking() {
             }
         } catch (e: Exception) {
             e.printStackTrace()
+            if (e is IOException) {
+                throw e;
+            }
         }
     }
 
@@ -186,8 +214,18 @@ class ShanghaiRanking_external_id : BaseRanking() {
     fun isEducationItem(entity: EntityDocument): Boolean {
         if (null != entity && entity is ItemDocument) {
             println("id ${entity.entityId.id}")
-            println("label: "
-                    + (entity as ItemDocument).labels["en"]!!.text)
+            try {
+                println("label: "
+                        + (entity as ItemDocument).labels["en"]!!.text)
+            } catch (e: Exception) {
+
+            }
+            try {
+                println("label: "
+                        + (entity as ItemDocument).labels["zh"]!!.text)
+            } catch (e: Exception) {
+
+            }
 
             var item: ItemDocument = entity as ItemDocument
             val group = item.statementGroups.filter { group ->
@@ -225,6 +263,7 @@ class ShanghaiRanking_external_id : BaseRanking() {
     }
 }
 
+data class UniversityCnInfo(val name_cn: String, val location: String, var url: String)
 data class UniversityInfo(val name: String, val country: String, var url: String)
 data class WikiItem(val itemLabel: String, val value: String)
 
