@@ -19,6 +19,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from scrapy.http import HtmlResponse
 import time
 
+# MAX_ITEM_COUNT = 2
 MAX_ITEM_COUNT = 31
 
 class UniversityMiddleware:
@@ -29,6 +30,11 @@ class UniversityMiddleware:
         self.browser.set_window_size(1000, 4000)
         self.browser.set_page_load_timeout(self.timeout)
         self.wait = WebDriverWait(self.browser, self.timeout)
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        s = cls()
+        return s
 
     def is_empty(sefl, text):
         if len(text) == 0:
@@ -44,11 +50,6 @@ class UniversityMiddleware:
     def debug(self, spider, message):
         spider.logger.debug(message)
         print(message)
-
-    @classmethod
-    def from_crawler(cls, crawler):
-        s = cls()
-        return s
 
     def process_request(self, request, spider):
         self.debug(spider,f"process_request url:{request.url}")
@@ -139,7 +140,7 @@ class UniversityMiddleware:
                             break
                     if not url.endswith("/institution"):
                         self.debug(spider,f"add url to queue:{url}")
-                        urls.append(url)
+                        urls.append({"url":url, "coord": f"page:{page} index:{index}"})
 
                     self.debug(spider,"back")
                     self.browser.back()

@@ -7,7 +7,6 @@ from pathlib import Path
 
 from selenium.common import TimeoutException
 
-
 class IdSpider(scrapy.Spider):
     name = "id"
     allowed_domains = ["www.shanghairanking.cn"]
@@ -18,7 +17,10 @@ class IdSpider(scrapy.Spider):
 
     def start_requests(self):
         for page in range(self.settings.get('MAX_PAGES')):
-            yield Request(url=self.start_urls[0], meta={"page": page + 1, }, dont_filter=True)
+            yield Request(url=self.start_urls[0],
+                          meta={"page": page + 1, },
+                          priority = 0,
+                          dont_filter=True)
 
     def parse(self, response):
         # page = response.url.split("/")[-2]
@@ -33,9 +35,14 @@ class IdSpider(scrapy.Spider):
             self.debug(f"len:{len(urls)}")
             pprint(urls)
             for url in urls:
-                self.logger.debug(f"yield url:{url}")
-                self.debug(f"yield url:{url}")
-                yield Request(url=url, callback=self.parse_detail, dont_filter=True)
+                self.logger.debug(f"yield url:{url["url"]}")
+                self.debug(f"yield url:{url["url"]}")
+                yield Request(
+                    url=url["url"],
+                    meta={"coord":url["coord"]},
+                    priority=1000,
+                    callback=self.parse_detail,
+                    dont_filter=True)
             self.logger.debug(f"yield done")
             self.debug(f"yield done")
 
@@ -60,5 +67,6 @@ class IdSpider(scrapy.Spider):
             "weburl"  : response.xpath('//div[@id="univ_addr"]//div[@class="school-website"]/span/text()').get(),
             "email"   : response.xpath('//div[@id="univ_addr"]//div[@class="school-email"]/span/text()').get(),
             "url"     : response.url,
+            "coord"   : response.meta["coord"]
 
         }

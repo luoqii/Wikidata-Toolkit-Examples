@@ -7,6 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 MAX_PAGES=97
+# MAX_PAGES=2
 
 LOG_FILE = 'scrapy.log'
 LOG_FILE_MODE = 'w'
