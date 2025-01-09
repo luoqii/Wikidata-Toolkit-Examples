@@ -31,7 +31,7 @@ class ShanghaiRanking_external_id : BaseRanking() {
             "University of Colorado Health Science Center",
             "Wuhan Huaxia University of Technology",
     )
-    var lastIndex = 2000
+    var lastIndex = 2660
 
     fun getShanghaiDatas(): List<UniversityInfo> {
         var type = object : TypeToken<Array<UniversityInfo>>() {}.type

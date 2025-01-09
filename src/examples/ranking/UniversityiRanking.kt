@@ -93,7 +93,6 @@ open class UniversityiRanking : BaseRanking() {
                 Title2Qid("University at Buffalo SUNY", "Q681025"),
         )
     }
-
     fun process(record: UniversityRecord,
                 config: Config,
                 siteKey: String,
