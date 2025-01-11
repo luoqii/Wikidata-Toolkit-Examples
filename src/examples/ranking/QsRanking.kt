@@ -111,7 +111,7 @@ class QsRanking : UniversityiRanking() {
     }
 
 
-    var lastIndex = 0
+    var lastIndex = 369
     fun parseUniversityDatasAndUpload2wikidata() {
 
         val config = Config()

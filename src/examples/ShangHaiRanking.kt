@@ -17,23 +17,23 @@ class ShangHaiRanking : UniversityiRanking() {
 
     fun parseDataAndUpload2wikidata() {
         //arwu
-        processDataSet("2003", TYPE.ARWU, LANG.EN)
-        processDataSet("2004", TYPE.ARWU, LANG.EN)
-        processDataSet("2005", TYPE.ARWU, LANG.EN)
-        processDataSet("2006", TYPE.ARWU, LANG.EN)
-        processDataSet("2007", TYPE.ARWU, LANG.EN)
-        processDataSet("2008", TYPE.ARWU, LANG.EN)
-        processDataSet("2009", TYPE.ARWU, LANG.EN)
-        processDataSet("2010", TYPE.ARWU, LANG.EN)
-        processDataSet("2011", TYPE.ARWU, LANG.EN)
-        processDataSet("2012", TYPE.ARWU, LANG.EN)
-        processDataSet("2013", TYPE.ARWU, LANG.EN)
-        processDataSet("2014", TYPE.ARWU, LANG.EN)
-        processDataSet("2015", TYPE.ARWU, LANG.EN)
-        processDataSet("2016", TYPE.ARWU, LANG.EN)
-        processDataSet("2018", TYPE.ARWU, LANG.EN)
-        processDataSet("2018", TYPE.ARWU, LANG.EN)
-        processDataSet("2019", TYPE.ARWU, LANG.EN)
+//        processDataSet("2003", TYPE.ARWU, LANG.EN)
+//        processDataSet("2004", TYPE.ARWU, LANG.EN)
+//        processDataSet("2005", TYPE.ARWU, LANG.EN)
+//        processDataSet("2006", TYPE.ARWU, LANG.EN)
+//        processDataSet("2007", TYPE.ARWU, LANG.EN)
+//        processDataSet("2008", TYPE.ARWU, LANG.EN)
+//        processDataSet("2009", TYPE.ARWU, LANG.EN)
+//        processDataSet("2010", TYPE.ARWU, LANG.EN)
+//        processDataSet("2011", TYPE.ARWU, LANG.EN)
+//        processDataSet("2012", TYPE.ARWU, LANG.EN)
+//        processDataSet("2013", TYPE.ARWU, LANG.EN)
+//        processDataSet("2014", TYPE.ARWU, LANG.EN)
+//        processDataSet("2015", TYPE.ARWU, LANG.EN)
+//        processDataSet("2016", TYPE.ARWU, LANG.EN)
+//        processDataSet("2018", TYPE.ARWU, LANG.EN)
+//        processDataSet("2018", TYPE.ARWU, LANG.EN)
+//        processDataSet("2019", TYPE.ARWU, LANG.EN)
 //        processDataSet("2020", TYPE.ARWU, LANG.EN)
 //        processDataSet("2021", TYPE.ARWU, LANG.EN)
 //        processDataSet("2022", TYPE.ARWU, LANG.EN)
@@ -57,8 +57,8 @@ class ShangHaiRanking : UniversityiRanking() {
 //        processDataSet("2023", TYPE.BCUR)
 
         //bcvcr
-//            processDataSet("2023", TYPE.BCVCR)
-//            processDataSet("2024", TYPE.BCVCR)
+            processDataSet("2023", TYPE.BCVCR)
+            processDataSet("2024", TYPE.BCVCR)
     }
 
     private fun processDataSet(year: String, type: TYPE, lang: LANG = LANG.ZH) {
