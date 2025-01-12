@@ -19,7 +19,12 @@ class CorrectDatePrecision : BaseRanking() {
         val datas = getErrorDatas()
         val config = Config()
 //        processItem(datas.get(0), config)
+        var lastIndex = 347
         datas.forEachIndexed { index, it ->
+            if (index < lastIndex) {
+                return@forEachIndexed
+            }
+
             val qid = it.university.split("/").last()
             println("index:$index qid:$qid")
 
@@ -37,10 +42,14 @@ class CorrectDatePrecision : BaseRanking() {
 
             var errorPrecisionStatement: Statement? = null
             var referenceUrl = ""
-            statement.references.get(0).snakGroups.get(0).snaks.forEach {snak ->
-                if (config.pidReferenceUrl.contentEquals(snak.propertyId.id)) {
-                    referenceUrl = ((snak as ValueSnak).value as StringValue).string
+            try {
+                statement.references.get(0).snakGroups.get(0).snaks.forEach { snak ->
+                    if (config.pidReferenceUrl.contentEquals(snak.propertyId.id)) {
+                        referenceUrl = ((snak as ValueSnak).value as StringValue).string
+                    }
                 }
+            } catch (e: Exception) {
+
             }
             var year = 0
             var ranking = (statement.value as QuantityValue).numericValue
@@ -94,9 +103,13 @@ class CorrectDatePrecision : BaseRanking() {
                                         TimeValue.CM_GREGORIAN_PRO)
                         )
                         .build()
-                val statement = StatementBuilder
+                val statementBuilder = StatementBuilder
                         .forSubjectAndProperty(Datamodel.makeWikidataItemIdValue(qid), Datamodel.makeWikidataPropertyIdValue(config.pidRanking))
-                        .withId(errorPrecisionStatement!!.statementId)
+
+                if (referenceUrl.isNotEmpty()) {
+                    statementBuilder.withReference(reference)
+                }
+                val statement = statementBuilder.withId(errorPrecisionStatement!!.statementId)
                         .withValue(Datamodel.makeQuantityValue((ranking)))
                         .withQualifierValue(Datamodel.makeWikidataPropertyIdValue(config.pidPointTime),
                                 DataObjectFactoryImpl().getTimeValue(year.toLong(),
@@ -111,7 +124,7 @@ class CorrectDatePrecision : BaseRanking() {
                                         0, TimeValue.CM_GREGORIAN_PRO)
                         )
                         .withQualifierValue(Datamodel.makeWikidataPropertyIdValue(config.pidDeterminateMethod), Datamodel.makeWikidataItemIdValue(determineMethod))
-                        .withReference(reference)
+
                         .build()
 
                 val statementUpdate: StatementUpdate = StatementUpdateBuilder.create()
