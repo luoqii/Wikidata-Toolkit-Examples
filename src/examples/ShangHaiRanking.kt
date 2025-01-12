@@ -10,9 +10,7 @@ import kotlin.collections.ArrayList
 
 class ShangHaiRanking : UniversityiRanking() {
     init {
-        zhErrata = listOf(
-                Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108")
-        )
+
     }
 
     fun parseDataAndUpload2wikidata() {

@@ -15,16 +15,7 @@ private const val comment = "more see [[User:Bangbang.S/ranking/shanghairanking_
 
 class ShanghaiRanking_external_id : BaseRanking() {
     val externalPid = "P5242"
-    val educationIds = mutableListOf<String>(
-            "Q2385804", //教育机构
-            "Q875538",//公立大学
-            "Q38723",//高等教育机构
-            "Q3918",//大学
-            "Q62078547",//公立研究型大学
-            "Q23002039",//美国公立教育机构
-            "Q3551775",//法国的大学
-            "Q902104",//私立大学
-    )
+
 
     val excludeNames = mutableListOf<String>(
             "Shenyang City University",
@@ -211,55 +202,67 @@ class ShanghaiRanking_external_id : BaseRanking() {
         val wikidataJsonArray = getWikiDatas()
     }
 
-    fun isEducationItem(entity: EntityDocument): Boolean {
-        if (null != entity && entity is ItemDocument) {
-            println("id ${entity.entityId.id}")
-            try {
-                println("label: "
-                        + (entity as ItemDocument).labels["en"]!!.text)
-            } catch (e: Exception) {
 
-            }
-            try {
-                println("label: "
-                        + (entity as ItemDocument).labels["zh"]!!.text)
-            } catch (e: Exception) {
-
-            }
-
-            var item: ItemDocument = entity as ItemDocument
-            val group = item.statementGroups.filter { group ->
-                group.property?.id.let {
-                    PROPERTY_ID_INSTANC_OF.contentEquals(it)
-                } ?: true
-
-            }
-
-            if (group.isEmpty()) {
-                return false
-            }
-
-            val statement = group[0].statements.firstOrNull {
-                val v = it.value
-                var match = false
-                if (v is ItemIdValue) {
-                    val idValue = v as ItemIdValue
-                    if (educationIds.contains(idValue.id)) {
-                        match = true
-                    }
-                }
-
-                match
-            }
-
-            return statement != null
-        }
-
-        return false
-    }
 
     companion object {
         val PROPERTY_ID_INSTANC_OF = "P31"
+        val educationIds = mutableListOf<String>(
+                "Q2385804", //教育机构
+                "Q875538",//公立大学
+                "Q38723",//高等教育机构
+                "Q3918",//大学
+                "Q62078547",//公立研究型大学
+                "Q23002039",//美国公立教育机构
+                "Q3551775",//法国的大学
+                "Q902104",//私立大学
+                "Q322563",//专科学校
+        )
+        fun isEducationItem(entity: EntityDocument): Boolean {
+            if (null != entity && entity is ItemDocument) {
+                println("id ${entity.entityId.id}")
+                try {
+                    println("label: "
+                            + (entity as ItemDocument).labels["en"]!!.text)
+                } catch (e: Exception) {
+
+                }
+                try {
+                    println("label: "
+                            + (entity as ItemDocument).labels["zh"]!!.text)
+                } catch (e: Exception) {
+
+                }
+
+                var item: ItemDocument = entity as ItemDocument
+                val group = item.statementGroups.filter { group ->
+                    group.property?.id.let {
+                        PROPERTY_ID_INSTANC_OF.contentEquals(it)
+                    } ?: true
+
+                }
+
+                if (group.isEmpty()) {
+                    return false
+                }
+
+                val statement = group[0].statements.firstOrNull {
+                    val v = it.value
+                    var match = false
+                    if (v is ItemIdValue) {
+                        val idValue = v as ItemIdValue
+                        if (educationIds.contains(idValue.id)) {
+                            match = true
+                        }
+                    }
+
+                    match
+                }
+
+                return statement != null
+            }
+
+            return false
+        }
     }
 }
 

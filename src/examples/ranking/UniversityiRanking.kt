@@ -14,7 +14,7 @@ open class UniversityiRanking : BaseRanking() {
     val DEBUG = false
     val DRY_RUN = false
 
-    val USE_FIRST_SEARCH_RESULT_WHEN_NOT_FOUND = true
+    val USE_FIRST_SEARCH_RESULT_WHEN_NOT_FOUND = false
 
     /**
      * 僅僅驗證原始數據格式，測試用
@@ -30,7 +30,6 @@ open class UniversityiRanking : BaseRanking() {
     var actionCountMap = HashMap<Action, Int>()
 
     var enErrata: List<Title2Qid> = listOf()
-    var zhErrata: List<Title2Qid> = listOf()
 
     init {
         enErrata = listOf(
@@ -91,6 +90,8 @@ open class UniversityiRanking : BaseRanking() {
                 Title2Qid("Trinity College Dublin, The University of Dublin", "Q2496094"),
                 Title2Qid("University of California, San Diego (UCSD)", "Q622664"),
                 Title2Qid("University at Buffalo SUNY", "Q681025"),
+                Title2Qid("Massachusetts Institute of Technology (MIT)", "Q49108"),
+                Title2Qid("天津市职业大学", "Q28412971")
         )
     }
     fun process(record: UniversityRecord,
@@ -105,7 +106,7 @@ open class UniversityiRanking : BaseRanking() {
         var university = fetcher.getEntityDocumentByTitle(siteKey, record.universityName)
         if (null == university) {
             println("try with errData")
-            val list = if (lang == LANG.EN) {enErrata} else {zhErrata}
+            val list = enErrata
             list.forEach {
                 if (it.title.contentEquals(record.universityName)) {
                     university = fetcher.getEntityDocument(it.qid)
@@ -123,6 +124,30 @@ open class UniversityiRanking : BaseRanking() {
 //                println("search university:${university}")
             }
         }
+        if (null == university) {
+            val search = record.universityName
+            var langStr = "en"
+            if (lang == LANG.ZH) {
+                langStr = "zh"
+            }
+            var searchResult = wbdf!!.searchEntities(search, langStr, 5)
+
+            println("getEntityDocumentByTitle return null search it")
+
+            if (searchResult != null && searchResult.size > 0) {
+                run loop@{
+                    searchResult.forEach {
+                        val search = wbdf!!.getEntityDocument(it.entityId)
+                        if (ShanghaiRanking_external_id.isEducationItem(search)) {
+                            university = search
+
+                            return@loop
+                        }
+                    }
+                }
+            }
+        }
+
         var item: ItemDocument? = null
         if (university is ItemDocument) {
             item = university as ItemDocument
@@ -258,7 +283,6 @@ open class UniversityiRanking : BaseRanking() {
                                         TimeValue.CM_GREGORIAN_PRO)
                         )
                         .build()
-                val noid = ItemIdValue.NULL
                 val statement = StatementBuilder
                         .forSubjectAndProperty(item!!.entityId, config.pidRankingValue)
                         .withValue(Datamodel.makeQuantityValue(BigDecimal.valueOf(record.ranking)))
